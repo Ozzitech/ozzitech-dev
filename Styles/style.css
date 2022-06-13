@@ -266,4 +266,51 @@ nav .nav-list li a:hover {
   font-weight: 500;
   color: #0E87C1;
 }
+
+footer {
+  border-top: 2px solid rgba(14, 135, 193, 0.8);
+}
+
+footer .footer-box {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .footer-box .ozzitech-info .img-box {
+  height: 30px;
+  width: 100%;
+  background: url("../assets/logo/Ozzitech logo Light.png");
+  background-size: contain;
+}
+
+footer .footer-box .ozzitech-info .socials {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+footer .footer-box .ozzitech-info .socials div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(14, 135, 193, 0.8);
+  overflow: hidden;
+}
+
+footer .footer-box .ozzitech-info .socials div img {
+  height: 100%;
+  width: 100%;
+}
+
+footer .footer-box .ozzitech-info .terms-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
