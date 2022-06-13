@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .nav-list{
+        display: flex;
+        gap:25px;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: right;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                &:hover{
+                    color:$blue;
+                }
+            }
+        }
+    }
+}
