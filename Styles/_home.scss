@@ -25,3 +25,38 @@ nav{
         }
     }
 }
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px 100px;
+    background-image: url('../assets/images/Stars.png');
+    background-size: contain;
+    font-family: $font-family;
+    
+    h2{
+        width: 70%;
+        font-weight: 300;
+        font-size: 6em;
+        line-height: 120px;
+        color: $blue;
+        
+    }
+    p{
+        color: #FFFFFF;
+        width: 50%;
+        font-size: 18px;
+        line-height: 25px;
+        padding-bottom: 30px;
+    }
+    &-img{
+        background-image: url('../assets/images/Rocket.png');
+        width:180px;
+        height: 180px;
+
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

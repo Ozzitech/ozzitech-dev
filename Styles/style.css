@@ -42,4 +42,45 @@ nav .nav-list li a {
 nav .nav-list li a:hover {
   color: rgba(14, 135, 193, 0.8);
 }
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 20px 100px;
+  background-image: url("../assets/images/Stars.png");
+  background-size: contain;
+  font-family: "Montserrat", serif;
+}
+
+.intro h2 {
+  width: 70%;
+  font-weight: 300;
+  font-size: 6em;
+  line-height: 120px;
+  color: rgba(14, 135, 193, 0.8);
+}
+
+.intro p {
+  color: #FFFFFF;
+  width: 50%;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 30px;
+}
+
+.intro-img {
+  background-image: url("../assets/images/Rocket.png");
+  width: 180px;
+  height: 180px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 /*# sourceMappingURL=style.css.map */
