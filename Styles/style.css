@@ -99,4 +99,16 @@ nav .nav-list li a:hover {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.desc-section {
+  margin: 100px 350px;
+}
+
+.desc-section p {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
