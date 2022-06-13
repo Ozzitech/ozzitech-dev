@@ -148,3 +148,57 @@ nav{
     }   
 }
 
+.our-process{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        padding: 10px;
+        border-bottom: 3px solid $blue;
+        width:30%;
+        font-weight: 500;
+    }
+    .our-process-list{
+        margin-bottom: 130px;
+        display: flex;
+        align-content: space-between;
+        justify-content: space-between;
+        gap: 30px;
+
+        p{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 35px;
+        }
+        p:first-child{
+            width:60%;
+        }
+        button{
+            height: 50px;
+        }
+
+        .img-box{
+            height: full;
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+        .our-process-desc{
+            
+            width:60%;
+            display: flex;
+            flex-direction: column;
+            h3{
+                margin: 0;
+                font-size: 70px;
+                font-weight: 500;
+                color: #0E87C1;
+            }
+            
+
+        }
+    }
+
+}
+
