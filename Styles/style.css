@@ -276,6 +276,7 @@ body {
   cursor: pointer;
   display: block;
   font-size: 1.2rem;
+  margin-top: 20px;
 }
 
 .btn-inner {
@@ -285,5 +286,176 @@ body {
   margin: 2px;
   padding: 1rem 3rem;
   text-transform: uppercase;
+}
+
+.homepage_content {
+  width: 1025px;
+  margin-top: 300px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: #C7C7C7;
+  margin-left: 55px;
+}
+
+.homepage_head {
+  margin-top: 300px;
+  height: 46px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFFFF;
+}
+
+.homepage_subhead {
+  margin-top: 300px;
+  height: 46px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0E87C1;
+}
+
+.img_content_home {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  height: 390px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 110px;
+  color: #0E87C1;
+}
+
+.photo_home {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.photo_home img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img_process_home {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.home_content_img {
+  width: 660px;
+  margin-top: 95px !important;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.photo_ourwork {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.photo_ourwork img {
+  max-width: 100%;
+  height: auto;
+}
+
+.photo_ourwork_1 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.img_process_home1 {
+  margin-top: 300px;
+  width: 80%;
+}
+
+.img_process_1 {
+  width: 360px;
+  margin-left: 130px;
+  margin-top: -10px;
+}
+
+.photo_ourwork_2 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.img_process_home2 {
+  margin-top: -50px;
+  width: 80%;
+}
+
+.photo_ourwork_3 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.img_process_home3 {
+  margin-top: 250px;
+  width: 80%;
+}
+
+.homepage_address {
+  margin-top: 600px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 37px;
+  color: #0E87C1;
+}
+
+.head_add {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+address {
+  width: 499px;
+  height: 135px;
+  margin-bottom: 0 !important;
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.address {
+  height: 500px;
+}
+
+.row .add {
+  height: 200px;
+}
+
+.row .col-sm-6 {
+  margin-top: 20px !important;
+}
+
+.add_email {
+  height: 26px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #0E87C1;
+}
+
+.phone {
+  margin-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */
