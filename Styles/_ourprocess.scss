@@ -1,8 +1,3 @@
-@import './ourprocess';
-@import './homepage';
-@import './variables';
-@import './main';
-@import './home';
 html {
 	scroll-behavior: smooth;
 	font-family: sans-serif !important;
@@ -109,6 +104,10 @@ ul {
 }
 .img-txt {
 	margin-top: 392px;
+}
+
+.img-txt-2{
+	margin-top: 100px;
 }
 .photo {
 	display: table-cell;
