@@ -36,9 +36,9 @@ body {
 .btn {
 	background: linear-gradient(270deg, #0e87c1, #500ec1);
 	border: none;
-	color: rgba(255, 255, 255, .8) !important;
-	padding: 0 !important;
-	border-radius: 40.25rem !important;
+	color: rgba(255, 255, 255, .8);
+	padding: 0 ;
+	border-radius: 40.25rem;
 	cursor: pointer;
 	display: block;
 	font-size: 1.2rem;
@@ -52,19 +52,19 @@ body {
 	padding: 1rem 3rem;
 	text-transform: uppercase;
   }
-.btn{
-    background-color: transparent;
-    border: 2px solid $blue;
-    border-radius: 50px;
-    padding: 10px 50px;
-    color: white;
-    cursor: pointer;
-    max-width: max-content;
-    &:hover{
-        background-color: $blue;
+// .btn{
+//     background-color: transparent;
+//     border: 2px solid $blue;
+//     border-radius: 50px;
+//     padding: 10px 50px;
+//     color: white;
+//     cursor: pointer;
+//     max-width: max-content;
+//     &:hover{
+//         background-color: $blue;
 
-    }
-}
+//     }
+// }
 
 nav{
     display: flex;
@@ -226,9 +226,6 @@ nav{
         }
         p:first-child{
             width:60%;
-        }
-        button{
-            height: 50px;
         }
 
         .img-box{
