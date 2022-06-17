@@ -1,192 +1,150 @@
-html {
-	scroll-behavior: smooth;
-	font-family: sans-serif !important;
-	overflow-x: hidden;
+header{
+	display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-around;
 }
-body {
-	background: linear-gradient(220deg, #180000, #1c0011 15%, #210126 36%, #0d0125 75%);
-	color: #fff;
-	letter-spacing: .02rem;
-	background-repeat: no-repeat;
-}
-.container {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-.heading_process {
-	margin-top: 300px;
-	height: 46px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 37px;
-	color: #0E87C1;
-}
-.process_head {
-	margin-top: 36px;
-	width: 80%;
-	height: 390px;
+h1 {
 	font-style: normal;
 	font-weight: 300;
 	font-size: 90px;
-	line-height: 110px;
 	color: #0E87C1;
+  padding-right: 75px;
+  padding-left: 75px;
 }
-.process_content {
-	height: 1096px;
-	width: 820px;
-	left: calc(50% - 820px/2 - 147.5px);
-	top: calc(50% - 1096px/2 + 186.5px);
-	font-style: normal;
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 50px;
-	color: rgba(255, 255, 255, 0.8);
-}
-.process_content_img {
-	width: 420px;
-	margin-top: 95px !important;
-	left: calc(50% - 820px/2 - 147.5px);
-	top: calc(50% - 1096px/2 + 186.5px);
-	font-style: normal;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 30px;
-	color: rgba(255, 255, 255, 0.8);
-}
-.process_cont_img {
-	width: 476px;
-	margin-top: 95px !important;
-	left: calc(50% - 820px/2 - 147.5px);
-	top: calc(50% - 1096px/2 + 186.5px);
-	font-style: normal;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 30px;
-	color: rgba(255, 255, 255, 0.8);
-}
-hr.new4 {
-	border-top: 1px solid #0E87C1;
-}
-.fa-linkedin {
-	background: #007bb5;
-	color: white;
-}
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-}
-ul {
-	list-style: none;
-}
-.menu {
-	align-items: center;
-	display: flex;
-	li {
-		margin-left: 2rem;
-		a {
-			color: white !important;
-            text-decoration-line: none;
-		}
-	}
-}
-.logo {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	padding: 25px 0;
-}
-.img-text {
-	width: 100%;
-	display: table;
-	table-layout: fixed;
-	margin-top: 392px;
-}
-.img-txt {
-	margin-top: 392px;
+.section_process_content {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  padding-right: 566px;
+  padding-left: 0;
 }
 
-.img-txt-2{
-	margin-top: 100px;
+.button{
+  padding-right: 75px;
+  padding-left: 75px;
+  margin-bottom: 200px;
 }
-.photo {
-	display: table-cell;
-	vertical-align: middle;
-	width: 50%;
-	img {
-		max-width: 100%;
-		height: auto;
-	}
+.btn {
+  background: linear-gradient(270deg, #0e87c1, #500ec1);
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0 !important;
+  border-radius: 40.25rem !important;
+  display: block;
+  max-width: max-content;
+  padding-right: 75px;
+  padding-left: 75px;
 }
-.img_content {
-	display: table-cell;
-	vertical-align: middle;
-	width: 50%;
-	height: 390px;
+.btn-inner {
+  background-color: rgba(13, 1, 37, 0.9);
+  border-radius: 33px;
+  display: inline-block;
+  margin: 2px;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: rgba(14, 135, 193, 0.8);
+}
+.section_content {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: #C7C7C7;
+  padding-right: 160px;
+  padding-left: 140px;
+  margin-bottom: 200px;
+}
+.section_maintitile {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFFFF;
+  padding-right: 75px;
+  padding-left: 75px;
+}
+.section_submaintitile {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0E87C1;
+  padding-right: 75px;
+  padding-left: 75px;
+  margin-top: 100px;
+}
+.maintitle_content_process{
+  display: flex;
+  margin-bottom: 200px;
+}
+.maintitle_content{
+	display: flex;
+	margin-bottom: 200px;
+	padding-left: 75px;
+}
+.image_text{
+  display: flex;
+}
+.section_images {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+.image_bitmap1{
+  margin-top: 250px;
+}
+.section_contact{
+  display: flex;
+  padding-right: 75px;
+  padding-left: 75px;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+.section_contacttitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0E87C1;
+  padding-right: 250px;
+  padding-left: 250px;
+}
+.contact_title {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+address {
 	font-style: normal;
-	font-weight: 300;
-	font-size: 90px;
-	line-height: 110px;
-	color: #0E87C1;
+	font-size: 20px;
+	line-height: 29px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
 }
-.photo_2 {
-	display: table-cell;
-	vertical-align: middle;
-	width: 50%;
+.head_add {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
 }
-.img_content_2 {
-	display: table-cell;
-	vertical-align: middle;
-	width: 50%;
-	height: 390px;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 90px;
-	line-height: 110px;
-	color: #0E87C1;
+.section_footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.img_process_1 {
-	height: 352px;
-	margin-top: -10px;
-	width: 450px;
+.footer_icon{
+  display: flex;
+  padding-left: 170px;
 }
-.img_process {
-	height: 380px;
-	margin-top: -62px;
-	width: 450px;
-}
+
 .footer {
-	.col-sm-4 {
-		color: rgba(255, 255, 255, .8);
-		margin-top: 12px;
-	}
+  border-top: 1px solid #0E87C1;
 }
-.hiring_content {
-	width: 820px;
-	left: calc(50% - 820px/2 - 147.5px);
-	top: calc(50% - 1096px/2 + 186.5px);
-	font-style: normal;
-	font-weight: 300;
-	font-size: 28px;
-	line-height: 40px;
-	color: rgba(255, 255, 255, 0.8);
-}
-.hiring_cont {
-	width: 595px;
-	left: calc(50% - 820px/2 - 147.5px);
-	top: calc(50% - 1096px/2 + 186.5px);
-	font-style: normal;
-	font-weight: 300;
-	font-size: 28px;
-	line-height: 40px;
-	color: rgba(255, 255, 255, 0.8);
-}
-.heading_hiring {
-	margin-top: 100px;
-	height: 46px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 37px;
+.address_email{
+	margin-bottom: 15px;
 	color: #0E87C1;
 }
