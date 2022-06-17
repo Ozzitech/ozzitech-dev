@@ -1,3 +1,15 @@
+@mixin for-phone{
+    @media(max-width:559px){
+        @content;
+    }
+}
+@mixin for-tablet{
+    @media(max-width:1000px){
+        @content;
+    }
+}
+
+
 html {
 	scroll-behavior: smooth;
 	font-family: sans-serif !important;
@@ -66,17 +78,20 @@ body {
 //     }
 // }
 
+// .hide {
+//     display: none;
+//   }
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     .nav-list{
         display: flex;
         gap:25px;
-        li{
+        .nav-item{
             list-style-type: none;
-            a{
+            .nav-link{
                 text-decoration: none;
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -91,7 +106,50 @@ nav{
                 }
             }
         }
+        @include for-phone{
+            position:absolute;
+            background-color:rgba(24, 62, 99, 0.9);
+            padding:60px 0;
+            right:0;
+            top:0;
+            margin:0;
+            width:50%;
+            display:none;
+            li{
+                padding:20px;
+            }
+        }
     }
+    .hamburger{
+        display:none;
+        cursor:pointer;
+        z-index:1;
+        @include for-phone{
+            display:block
+        }
+        .bar{
+            width:30px;
+            height:3px;
+            display:block;
+            margin:5px;
+            background-color:white;
+        }
+    }
+    .active{
+        .bar:nth-child(2){
+            opacity:0;
+        }
+        .bar:nth-child(1){
+            transform:translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(3){
+            transform:translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+.active{
+    display:block !important;
 }
 
 .intro{
