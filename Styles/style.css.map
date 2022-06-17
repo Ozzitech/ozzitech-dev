@@ -4,13 +4,8 @@
     "sources": [
         "style.scss",
         "_ourprocess.scss",
-        "_homepage.scss",
-        "style.scss",
-        "_variables.scss",
-        "_main.scss",
-        "_home.scss"
+        "_homepage.scss"
     ],
-
     "names": [],
     "file": "style.css"
 }
