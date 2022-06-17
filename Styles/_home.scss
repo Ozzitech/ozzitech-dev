@@ -1,26 +1,35 @@
 .container {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+@mixin for-phone{
+    @media(max-width:559px){
+        @content;
+    }
+}
+@mixin for-tablet{
+    @media(max-width:1000px){
+        @content;
+    }
 }
 
-.home_head {
-	margin-top: 50px;
-	width: 80%;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 90px;
-	line-height: 110px;
-	color: #0E87C1;
-}
-.home_content {
-	width: 70%;
-	margin-top: 20px;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 50px;
-	color: rgba(255, 255, 255, 0.8);
-}
+// .home_head {
+// 	margin-top: 50px;
+// 	width: 80%;
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	font-size: 90px;
+// 	line-height: 110px;
+// 	color: #0E87C1;
+// }
+// .home_content {
+// 	width: 70%;
+// 	margin-top: 20px;
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	font-size: 30px;
+// 	line-height: 50px;
+// 	color: rgba(255, 255, 255, 0.8);
+// }
 
 .btn {
 	background: linear-gradient(270deg, #0e87c1, #500ec1);
@@ -41,31 +50,18 @@
 	padding: 1rem 3rem;
 	text-transform: uppercase;
   }
-// .btn{
-//     background-color: transparent;
-//     border: 2px solid $blue;
-//     border-radius: 50px;
-//     padding: 10px 50px;
-//     color: white;
-//     cursor: pointer;
-//     max-width: max-content;
-//     &:hover{
-//         background-color: $blue;
-
-//     }
-// }
 
 nav{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     .nav-list{
         display: flex;
         gap:25px;
-        li{
+        .nav-item{
             list-style-type: none;
-            a{
+            .nav-link{
                 text-decoration: none;
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -80,7 +76,50 @@ nav{
                 }
             }
         }
+        @include for-phone{
+            position:absolute;
+            background-color:rgba(24, 62, 99, 0.9);
+            padding:60px 0;
+            right:0;
+            top:0;
+            margin:0;
+            width:50%;
+            display:none;
+            li{
+                padding:20px;
+            }
+        }
     }
+    .hamburger{
+        display:none;
+        cursor:pointer;
+        z-index:1;
+        @include for-phone{
+            display:block
+        }
+        .bar{
+            width:30px;
+            height:3px;
+            display:block;
+            margin:5px;
+            background-color:white;
+        }
+    }
+    .active{
+        .bar:nth-child(2){
+            opacity:0;
+        }
+        .bar:nth-child(1){
+            transform:translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(3){
+            transform:translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+.active{
+    display:block !important;
 }
 
 .intro{
@@ -91,6 +130,13 @@ nav{
     background-image: url('../assets/images/Stars.png');
     background-size: contain;
     font-family: $font-family;
+    @include for-phone{
+        padding: 20px ;
+        text-align: center;
+        align-items: center;
+
+
+    }
     
     h2{
         width: 70%;
@@ -98,6 +144,11 @@ nav{
         font-size: 6em;
         line-height: 120px;
         color: $blue;
+        @include for-phone{
+            width: 100%;
+            font-size: 4em;
+            line-height: 1em;
+        }
         
     }
     p{
@@ -106,6 +157,13 @@ nav{
         font-size: 18px;
         line-height: 25px;
         padding-bottom: 30px;
+        padding: 0;
+        @include for-phone{
+            width:100%;
+        }
+    }
+    button{
+        max-width: max-content;
     }
     &-img{
         background-image: url('../assets/images/Rocket.png');
@@ -120,12 +178,16 @@ nav{
 
 .desc-section{
     margin: 100px 350px;
+    @include for-phone{
+        margin:40px 10px;
+    }
     p{
         font-weight: 200;
         font-size: 16px;
         line-height: 1.5;
         color: #FFFFFF;
         text-align: center;
+        padding: 0;
     }
 }
 
@@ -134,11 +196,18 @@ nav{
     flex-direction: column;
     margin: 50px 100px;
     gap:30px;
+    @include for-phone{
+        margin: 40px 10px;
+    }
     h2{
         padding:10px 0px;
         border-bottom: 3px solid $blue;
         width:30%;
         font-weight: 500;
+        @include for-phone{
+            width: 70%;
+        }
+
     }
     .outer-box{
         display: flex;
@@ -148,6 +217,9 @@ nav{
         .img-box{
             width: 70%;
             height: 700px;
+            @include for-phone{
+                height: auto;
+            }
             img{
                 max-width: 100%;
                 max-height: 100%;
@@ -175,11 +247,24 @@ nav{
                 opacity: 0.9;
                 background-color: white;
                 margin-top: -50%;
+                @include for-phone{
+                    font-size: 0.6em;
+                    padding:10px;
+                }
+                p{
+                    color: #021132;
+                    font-size: 1em;
+                    margin:0;
+                    padding:0;
+                }
                 a{
                     margin-top: 20px;
                     text-decoration: none;
                     color: #021132;
                     align-self: end;
+                    @include for-phone{
+                        margin-top: 5px;
+                    }
                 &:hover{
                     color: $purple;
                     font-weight: 600;
@@ -195,11 +280,17 @@ nav{
     margin: 50px 100px;
     display: flex;
     flex-direction: column;
+    @include for-phone{
+        margin: 40px 10px;
+    }
     h2{
         padding: 10px 0px;
         border-bottom: 3px solid $blue;
         width:30%;
         font-weight: 500;
+        @include for-phone{
+            width: 70%;
+        }
     }
     .our-process-list{
         margin-bottom: 130px;
@@ -207,6 +298,14 @@ nav{
         align-content: space-between;
         justify-content: space-between;
         gap: 30px;
+        @include for-phone{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .btn{
+            height: max-content;
+        }
 
         p{
             font-weight: 300;
@@ -215,6 +314,9 @@ nav{
         }
         p:first-child{
             width:60%;
+            @include for-phone{
+                width: 100%;
+            }
         }
 
         .img-box{
@@ -223,17 +325,26 @@ nav{
             img{
                 width: 100%;
             }
+            @include for-phone{
+                display: none;
+            }
         }
         .our-process-desc{
             
             width:60%;
             display: flex;
             flex-direction: column;
+            @include for-phone{
+                width: 100%;
+            }
             h3{
                 margin: 0;
                 font-size: 70px;
                 font-weight: 500;
                 color: #0E87C1;
+                @include for-phone{
+                    font-size: 3em;
+                }
             }
             
 
@@ -249,6 +360,10 @@ footer{
         font-weight: 200;
         display: flex;
         justify-content: space-around;
+        p{
+            padding: 0;
+            font-size: 1em;
+        }
         .ozzitech-info{
             .img-box{
                 height: 30px;
@@ -276,8 +391,12 @@ footer{
             }
         }
         .terms-box{
-            gap:20px;
+            gap:10px;
             display: flex;
+            @include for-phone{
+                flex-direction: column;
+                gap: 0px;
+            }
         }
     }
 }
