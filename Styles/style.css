@@ -307,6 +307,11 @@ nav .active .bar:nth-child(3) {
     align-items: center;
   }
 }
+.our-process .our-process-list .btn {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
 .our-process .our-process-list p {
   font-weight: 300;
   font-size: 18px;
