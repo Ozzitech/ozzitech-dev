@@ -1,6 +1,7 @@
 .container {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+}
 @mixin for-phone{
     @media(max-width:559px){
         @content;
