@@ -588,6 +588,13 @@ nav .active .bar:nth-child(3) {
   background-size: contain;
   font-family: "Montserrat", serif;
 }
+@media (max-width: 559px) {
+  .intro {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+}
 .intro h2 {
   width: 70%;
   font-weight: 300;
@@ -595,12 +602,29 @@ nav .active .bar:nth-child(3) {
   line-height: 120px;
   color: rgba(14, 135, 193, 0.8);
 }
+@media (max-width: 559px) {
+  .intro h2 {
+    width: 100%;
+    font-size: 4em;
+    line-height: 1em;
+  }
+}
 .intro p {
   color: #FFFFFF;
   width: 50%;
   font-size: 18px;
   line-height: 25px;
   padding-bottom: 30px;
+}
+@media (max-width: 559px) {
+  .intro p {
+    width: 100%;
+  }
+}
+.intro button {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .intro-img {
   background-image: url("../assets/images/Rocket.png");
@@ -613,6 +637,11 @@ nav .active .bar:nth-child(3) {
 
 .desc-section {
   margin: 100px 350px;
+}
+@media (max-width: 559px) {
+  .desc-section {
+    margin: 40px 10px;
+  }
 }
 .desc-section p {
   font-weight: 200;
@@ -628,11 +657,21 @@ nav .active .bar:nth-child(3) {
   margin: 50px 100px;
   gap: 30px;
 }
+@media (max-width: 559px) {
+  .our-work {
+    margin: 40px 10px;
+  }
+}
 .our-work h2 {
   padding: 10px 0px;
   border-bottom: 3px solid rgba(14, 135, 193, 0.8);
   width: 30%;
   font-weight: 500;
+}
+@media (max-width: 559px) {
+  .our-work h2 {
+    width: 70%;
+  }
 }
 .our-work .outer-box {
   display: flex;
@@ -642,6 +681,11 @@ nav .active .bar:nth-child(3) {
 .our-work .outer-box .img-box {
   width: 70%;
   height: 700px;
+}
+@media (max-width: 559px) {
+  .our-work .outer-box .img-box {
+    height: auto;
+  }
 }
 .our-work .outer-box .img-box img {
   max-width: 100%;
@@ -666,11 +710,22 @@ nav .active .bar:nth-child(3) {
   background-color: white;
   margin-top: -50%;
 }
+@media (max-width: 559px) {
+  .our-work .outer-box .img-box .card {
+    font-size: 0.6em;
+    padding: 10px;
+  }
+}
 .our-work .outer-box .img-box .card a {
   margin-top: 20px;
   text-decoration: none;
   color: #021132;
   align-self: end;
+}
+@media (max-width: 559px) {
+  .our-work .outer-box .img-box .card a {
+    margin-top: 5px;
+  }
 }
 .our-work .outer-box .img-box .card a:hover {
   color: rgb(29, 13, 66);
@@ -682,11 +737,21 @@ nav .active .bar:nth-child(3) {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 559px) {
+  .our-process {
+    margin: 40px 10px;
+  }
+}
 .our-process h2 {
   padding: 10px 0px;
   border-bottom: 3px solid rgba(14, 135, 193, 0.8);
   width: 30%;
   font-weight: 500;
+}
+@media (max-width: 559px) {
+  .our-process h2 {
+    width: 70%;
+  }
 }
 .our-process .our-process-list {
   margin-bottom: 130px;
@@ -694,6 +759,13 @@ nav .active .bar:nth-child(3) {
   align-content: space-between;
   justify-content: space-between;
   gap: 30px;
+}
+@media (max-width: 559px) {
+  .our-process .our-process-list {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 .our-process .our-process-list p {
   font-weight: 300;
@@ -703,6 +775,11 @@ nav .active .bar:nth-child(3) {
 .our-process .our-process-list p:first-child {
   width: 60%;
 }
+@media (max-width: 559px) {
+  .our-process .our-process-list p:first-child {
+    width: 100%;
+  }
+}
 .our-process .our-process-list .img-box {
   height: full;
   width: 30%;
@@ -710,16 +787,31 @@ nav .active .bar:nth-child(3) {
 .our-process .our-process-list .img-box img {
   width: 100%;
 }
+@media (max-width: 559px) {
+  .our-process .our-process-list .img-box {
+    display: none;
+  }
+}
 .our-process .our-process-list .our-process-desc {
   width: 60%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 559px) {
+  .our-process .our-process-list .our-process-desc {
+    width: 100%;
+  }
 }
 .our-process .our-process-list .our-process-desc h3 {
   margin: 0;
   font-size: 70px;
   font-weight: 500;
   color: #0E87C1;
+}
+@media (max-width: 559px) {
+  .our-process .our-process-list .our-process-desc h3 {
+    font-size: 3em;
+  }
 }
 
 footer {
@@ -757,6 +849,12 @@ footer .footer-box .ozzitech-info .socials div img {
 footer .footer-box .terms-box {
   gap: 20px;
   display: flex;
+}
+@media (max-width: 559px) {
+  footer .footer-box .terms-box {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 
 html {
