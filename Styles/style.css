@@ -56,6 +56,21 @@ nav {
   align-items: center;
   justify-content: space-around;
 }
+nav a .img-logo {
+  background-image: url("../assets/logo/Ozzitech logo Light.png");
+  width: 300px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 559px) {
+  nav a .img-logo {
+    width: 200px;
+    height: 40px;
+    margin-right: 50px;
+  }
+}
 nav .nav-list {
   display: flex;
   gap: 25px;
