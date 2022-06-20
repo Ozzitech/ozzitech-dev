@@ -12,32 +12,21 @@
         @content;
     }
 }
+#header{
+        z-index: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
 
-// .home_head {
-// 	margin-top: 50px;
-// 	width: 80%;
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	font-size: 90px;
-// 	line-height: 110px;
-// 	color: #0E87C1;
-// }
-// .home_content {
-// 	width: 70%;
-// 	margin-top: 20px;
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	font-size: 30px;
-// 	line-height: 50px;
-// 	color: rgba(255, 255, 255, 0.8);
-// }
-.no-scroll{
-    // overflow-y: hidden !important;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
+
+    }
+  
+#header.scrolled {
+      background: rgba(14, 5, 42, 0.9);
+      color: #e0e0e0;
+    transition: all 0.3s ease;
+  }
 
 .btn {
 	background: linear-gradient(270deg, #0e87c1, #500ec1);
@@ -101,25 +90,32 @@ nav{
             }
         }
         @include for-phone{
-            transition: visibility 1s;
-            position:absolute;
-            background-image: linear-gradient(rgb(47, 19, 52),rgb(16, 16, 37));
+            position: fixed;
+            z-index: 3;
+            // position:absolute;
+            background-image: linear-gradient(rgb(32, 8, 37),rgb(8, 8, 19));
             padding:60px 0;
             right:0;
             top:0;
             margin:0;
             width:100%;
             height: 100vh;
-            display:none;
+            transition: 1s ease;
+            right: -1000px;
+            flex-direction: column;
+
+            // display:none;
             li{
                 padding:20px;
             }
         }
     }
     .hamburger{
+        // position: fixed;
         display:none;
+        z-index: 3;
         cursor:pointer;
-        z-index:1;
+        right:0;
         @include for-phone{
             display:block;
         }
@@ -147,7 +143,8 @@ nav{
 }
 
 .active{
-    display:block !important;
+    right:0px !important;
+    // display:block !important;
 }
 
 .intro{
