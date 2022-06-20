@@ -122,19 +122,20 @@ nav .hamburger {
 nav .hamburger .bar {
   transition: 600ms;
   width: 30px;
-  height: 3px;
+  height: 4px;
+  border-radius: 5px;
   display: block;
-  margin: 5px;
+  margin: 7px;
   background-color: white;
 }
 nav .active .bar:nth-child(2) {
   opacity: 0;
 }
 nav .active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(11px) rotate(45deg);
 }
 nav .active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 .active {
