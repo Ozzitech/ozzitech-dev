@@ -297,8 +297,16 @@ nav .active .bar:nth-child(3) {
 .our-work .outer-box .img-box .card p {
   color: #021132;
   font-size: 1em;
+  box-orient: vertical;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 559px) {
+  .our-work .outer-box .img-box .card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .our-work .outer-box .img-box .card a {
   margin-top: 20px;
