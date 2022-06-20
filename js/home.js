@@ -15,9 +15,13 @@ const navLink = document.querySelectorAll('.nav-link');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navList.classList.toggle('active');
+  document.body.classList.toggle('no-scroll')
 });
 
 navLink.forEach(n=>n.addEventListener('click',()=>{
-  hamburger.classList.remove("active")
-  navList.classList.remove("active")
+  hamburger.classList.remove("active");
+  navList.classList.remove("active");
+  document.body.classList.toggle('no-scroll')
+
+
 }))
