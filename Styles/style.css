@@ -11,7 +11,6 @@ body {
   letter-spacing: 0.02rem;
   background-repeat: no-repeat;
   font-family: "Montserrat", serif;
-  overflow-y: hidden !important;
 }
 
 .container {
@@ -80,8 +79,9 @@ nav .nav-list .nav-item .nav-link:hover {
 }
 @media (max-width: 559px) {
   nav .nav-list {
+    transition: visibility 1s;
     position: absolute;
-    background-color: rgba(24, 62, 99, 0.9);
+    background-image: linear-gradient(rgb(47, 19, 52), rgb(16, 16, 37));
     padding: 60px 0;
     right: 0;
     top: 0;
@@ -105,6 +105,7 @@ nav .hamburger {
   }
 }
 nav .hamburger .bar {
+  transition: 600ms;
   width: 30px;
   height: 3px;
   display: block;

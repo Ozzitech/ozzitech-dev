@@ -85,8 +85,9 @@ nav{
             }
         }
         @include for-phone{
+            transition: visibility 1s;
             position:absolute;
-            background-color:rgba(24, 62, 99, 0.9);
+            background-image: linear-gradient(rgb(47, 19, 52),rgb(16, 16, 37));
             padding:60px 0;
             right:0;
             top:0;
@@ -104,9 +105,10 @@ nav{
         cursor:pointer;
         z-index:1;
         @include for-phone{
-            display:block
+            display:block;
         }
         .bar{
+            transition: 600ms;
             width:30px;
             height:3px;
             display:block;
