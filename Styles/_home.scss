@@ -9,7 +9,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        padding: 10px;
+        padding: 20px;
     }
   
 #header.scrolled {
@@ -46,15 +46,16 @@ nav{
     a{
         .img-logo{
             background-image: url('../assets/logo/Ozzitech logo Light.png');
-            width:300px;
-            height: 100px;
+            width: 200px;
+            height: 40px;
+            margin-right: 50px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             @include sm{
-                width: 200px;
-                height: 40px;
-                margin-right: 50px;
+
+                width:300px;
+                height: 100px;
             }
         }
 
@@ -62,6 +63,22 @@ nav{
     .nav-list{
         display: flex;
         gap:25px;
+        position: fixed;
+        z-index: 3;
+        // position:absolute;
+        background-image: linear-gradient(rgb(32, 8, 37),rgb(8, 8, 19));
+        padding:60px 0;
+        right:0;
+        top:0;
+        margin:0;
+        width:100%;
+        height: 100vh;
+        transition: 1s ease;
+        right: -1000px;
+        flex-direction: column;
+        li{
+            padding:20px;
+        }
         .nav-item{
             list-style-type: none;
             .nav-link{
@@ -79,26 +96,26 @@ nav{
                 }
             }
         }
-        @include sm{
-            position: fixed;
-            z-index: 3;
-            // position:absolute;
-            background-image: linear-gradient(rgb(32, 8, 37),rgb(8, 8, 19));
-            padding:60px 0;
-            right:0;
-            top:0;
-            margin:0;
-            width:100%;
-            height: 100vh;
-            transition: 1s ease;
-            right: -1000px;
-            flex-direction: column;
+        // @include sm{
+        //     position: fixed;
+        //     z-index: 3;
+        //     // position:absolute;
+        //     background-image: linear-gradient(rgb(32, 8, 37),rgb(8, 8, 19));
+        //     padding:60px 0;
+        //     right:0;
+        //     top:0;
+        //     margin:0;
+        //     width:100%;
+        //     height: 100vh;
+        //     transition: 1s ease;
+        //     right: -1000px;
+        //     flex-direction: column;
 
-            // display:none;
-            li{
-                padding:20px;
-            }
-        }
+        //     // display:none;
+        //     li{
+        //         padding:20px;
+        //     }
+        // }
         @include lg{
             flex-direction: row;
             transition: none;
@@ -152,7 +169,8 @@ nav{
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 20px 100px;
+    padding: 10px;
+    margin-top: 10%;
     background-image: url('../assets/images/Stars.png');
     background-size: contain;
     font-family: $font-family;
@@ -162,45 +180,55 @@ nav{
         text-align: center;
         align-items: center;
     }
-    @include md{
-        margin-top: 10%; 
+    @include lg{
+        padding: 20px 100px;
     }
     
     h2{
-        width: 70%;
-        font-weight: 300;
-        font-size: 6em;
-        line-height: 120px;
+        width: 100%;
+        font-size: 3em;
+        line-height: 1em;
         color: $blue;
-        @include sm{
-            width: 100%;
-            font-size: 4em;
-            line-height: 1em;
-        }
+        font-weight: 400;
+        text-align: center;
+
         @include md{
             width: 100%;
             font-size: 4.5em;
             line-height: 1em;
         }
+        @include lg{
+            width: 70%;
+            font-weight: 300;
+            font-size: 6em;
+            line-height: 120px;
+            text-align: left;
+    
+        }
         
     }
     p{
         color: #FFFFFF;
-        width: 50%;
-        font-size: 18px;
-        line-height: 25px;
-        padding-bottom: 30px;
+        font-size: 1em;
+        width: 80%;
         padding: 0;
-        font-size: 1.2em;
-        @include sm{
-            width:100%;
-        }
+        margin-bottom: 20px;
+        text-align: center;
+        align-self: center;
         @include md{
             font-size: 1.5em;
             width: 80%;
         }
+        @include lg{
+            width: 50%;
+            font-size: 18px;
+            line-height: 25px;
+            padding: 0;
+            font-size: 1.2em;
+        }
     }
     button{
+        align-self: center;
         max-width: max-content;
     }
     &-img{
@@ -216,12 +244,13 @@ nav{
 }
 
 .desc-section{
-    margin: 100px 350px;
-    @include sm{
-        margin:40px 10px;
-    }
+    margin:40px 10px;
     @include md{
         margin:40px;
+    }
+    @include lg{
+        margin: 100px 350px;
+
     }
     p{
         font-weight: 200;
@@ -236,21 +265,23 @@ nav{
 .our-work{
     display:flex;
     flex-direction: column;
-    margin: 50px 100px;
+    margin: 40px 10px;
     gap:30px;
     @include sm{
-        margin: 40px 10px;
     }
     @include md{
         margin: 40px;
     }
+    @include lg{
+        margin: 50px 100px;
+    }
     h2{
         padding:10px 0px;
         border-bottom: 3px solid $blue;
-        width:30%;
+        width: 70%;
         font-weight: 500;
-        @include sm{
-            width: 70%;
+        @include lg{
+            width:30%;
         }
 
     }
@@ -261,12 +292,12 @@ nav{
         
         .img-box{
             width: 70%;
-            height: 700px;
-            @include sm{
-                height: auto;
-            }
+            height: auto;
             @include md{
                 margin: 100px;
+            }
+            @include lg{
+                height: 700px;
             }
             img{
                 max-width: 100%;
@@ -291,20 +322,23 @@ nav{
                 flex-direction: column;
                 color:#021132;
                 width: 50%;
-                padding: 25px 50px;
                 opacity: 0.9;
                 background-color: white;
                 margin-top: -50%;
-                @include sm{
-                    font-size: 0.6em;
-                    padding:10px;
+                font-size: 0.6em;
+                padding:10px;
+                @include lg{
+                    padding: 25px 50px;
+
                 }
                 p{
                     color: #021132;
                     font-size: 1em;
-                    box-orient:vertical;
                     margin:0;
                     padding:0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     @include sm{
                         white-space: nowrap;
                         overflow: hidden;
@@ -315,12 +349,13 @@ nav{
                     }
                 }
                 a{
-                    margin-top: 20px;
                     text-decoration: none;
                     color: #021132;
                     align-self: end;
-                    @include sm{
-                        margin-top: 5px;
+                    margin-top: 5px;
+                    @include lg{
+                        margin-top: 20px;
+
                     }
                 &:hover{
                     color: $purple;
@@ -334,22 +369,22 @@ nav{
 }
 
 .our-process{
-    margin: 50px 100px;
+    margin: 40px 10px;
     display: flex;
     flex-direction: column;
-    @include sm{
-        margin: 40px 10px;
-    }
     @include md{
         margin: 40px;
+    }
+    @include lg{
+        margin: 50px 100px;
     }
     h2{
         padding: 10px 0px;
         border-bottom: 3px solid $blue;
-        width:30%;
+        width:70%;
         font-weight: 500;
-        @include sm{
-            width: 70%;
+        @include lg{
+            width: 30%;
         }
     }
     .our-process-list{
@@ -357,12 +392,10 @@ nav{
         display: flex;
         align-content: space-between;
         justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
         gap: 30px;
-        @include sm{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-        }
         @include md{
             flex-direction: row;
             text-align: left;
@@ -378,41 +411,46 @@ nav{
             line-height: 35px;
         }
         p:first-child{
-            width:60%;
-            @include sm{
-                width: 100%;
+            width: 100%;
+            @include lg{
+                width:60%;
+
             }
         }
 
         .img-box{
-            height: full;
-            width: 30%;
+            display: none;
+
             img{
                 width: 100%;
-            }
-            @include sm{
-                display: none;
             }
             @include md{
                 display: block;
             }
+            @include lg{
+                height: full;
+                width: 30%;
+            }
         }
         .our-process-desc{
             
-            width:60%;
+            width:100%;
             display: flex;
             flex-direction: column;
-            @include sm{
-                width: 100%;
+            @include lg{
+                width: 60%;
             }
             h3{
                 margin: 0;
-                font-size: 70px;
+                font-size: 2.3em;
                 font-weight: 500;
                 color: #0E87C1;
                 @include sm{
                     font-size: 3em;
                 }
+            }
+            p{
+                font-size: 1em;
             }
             
 
