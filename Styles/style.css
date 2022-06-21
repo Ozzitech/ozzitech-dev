@@ -410,6 +410,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 h1 {
@@ -500,10 +502,9 @@ h1 {
   margin-bottom: 200px;
 }
 
-.maintitle_content {
+.maintitle_content_pro {
   display: flex;
   margin-bottom: 200px;
-  padding-left: 75px;
 }
 
 .image_text {
@@ -1153,4 +1154,7 @@ ul {
   .img_content_home {
     font-size: 70px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+
+/*# sourceMappingURL=style.css.map */

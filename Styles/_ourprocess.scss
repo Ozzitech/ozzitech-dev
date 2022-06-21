@@ -3,6 +3,8 @@ header{
   -webkit-box-align: center;
   align-items: center;
   justify-content: space-around;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 h1 {
 	font-style: normal;
@@ -81,10 +83,9 @@ h1 {
   display: flex;
   margin-bottom: 200px;
 }
-.maintitle_content{
+.maintitle_content_pro{
 	display: flex;
 	margin-bottom: 200px;
-	padding-left: 75px;
 }
 .image_text{
   display: flex;
@@ -148,6 +149,8 @@ address {
 	margin-bottom: 15px;
 	color: #0E87C1;
 }
+
+
 
 @media (max-width: 576px) {
 	header{
