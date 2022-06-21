@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="styles/contact_responsive.style.css">
+        <script src="./contact_script.js"></script>
+       
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header_container">
+        <div class="logo">
+          <a href="/"><img class="ozzi_logo"src="logo.png"></a>
+        </div>
+         <div><a class="contact_menu" href="contact.html">Contact  <svg width="9" height="13" viewBox="0 0 9 15">
+            <path d="M.379.41a1.346 1.346 0 0 0 .015 1.888L5.598 7.5.394 12.702A1.346 1.346 0 1 0 2.3 14.605l6.153-6.153a1.346 1.346 0 0 0 0-1.904L2.298.394a1.346 1.346 0 0 0-1.904 0L.38.41z" fill="#0E87C1" fill-rule="nonzero"></path>
+          </svg></a></div>
+       </div>
+    </div>
+  </header>
+
+    <main>
+      <div class="container">
+        <div class="contact">
+          <h2 class="contact-title">Let’s chat</h2>
+          <div class="contact-description">
+            <div class="contact-para"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada vehicula tincidunt.</p></div>
+          </div>
+          <div class="contact-form">
+      <form class="contact-form-wrapper" name="myForm" onsubmit="validateForm(event)">  
+
+                    <div class="contact">
+                    <label for="name">Hello, my name is</label></div>
+                    <input type="text" name ="name">
+                    <span class="error" id="errorname"></span>
+
+                    <div class="contact">
+                    <label for="short_msg">I want to talk to you about</label></div>
+                    <input type="text" name="short_msg">
+                    <span class="error" id="errorshort_msg"></span>
+
+
+                    <div class="contact">
+                    <label for="email">my email is</label></div>
+                    <input type="text" name="email">
+                    <span class="error" id="erroremail"></span>
+
+                    <div class="contact">
+                    <label for="num">my phone number is</label></div>
+                    <input type="text" name="num">
+                    <span class="error" id="errornum"></span>
+                  
+
+                    <div class="contact">
+                    <label for="info">here’s more info</label></div>
+                    <textarea  class="msg box" name="msg" rows="2" cols="10"></textarea></div>
+                    <span class="error" id="errormsg"></span>
+
+                  <button type="submit" class="btn"><span class="btn-inner">Submit</span></button> 
+                  
+            </form>        
+          </div>      
+         </div>
+       </div>
+      </main>
+
+      <div class="footer">
+        <div class="grid-container">
+           <div class="icons"></div>
+              <div class="footer_logo">
+              <img src="logo.png" alt="logo" width="200" height="50" style="margin-left: 95px;">
+             </div>
+            <div class="copyright">
+            &copy; Ozzitech
+           </div>
+            <div class="footer-menu">
+            <span class="spn1" style="margin-left: 40px;">Terms &amp; conditions</span>
+            <span class="policy">Privacy Policy</span>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="icons"></div>
+          <div class="footer_logo flogo" style="margin-left: 75px;">
+            <a href="#"class="footer_icon icn" ><i class='bx bx-envelope'></i></a>
+            <a href="#"class="footer_icon icn" ><i class='bx bxl-linkedin' ></i></a>
+            <a href="#" class="footer_icon" ><i class="bx bxl-facebook-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      </div>
+</footer>  
+</body>
+
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function SendEmail(){
+      Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "deepika@ozzi.tech",
+    Password : "018E3E9186D58FE296861CE0672E4753FC6D",
+    To : 'ddeepika0006@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Phone no.: " + document.getElementById("num").value
+    + "<br> Message: " + document.getElementById("msg box").value
+  }).then(
+  message => alert(Message Sent Successfully)
+);
+    }
+  </script> -->
+  
+
+        
