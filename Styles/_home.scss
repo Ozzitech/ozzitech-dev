@@ -2,24 +2,14 @@
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
-@mixin for-phone{
-    @media(max-width:559px){
-        @content;
-    }
-}
-@mixin for-tablet{
-    @media(max-width:1000px){
-        @content;
-    }
-}
+
 #header{
         z-index: 1;
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
-
-
+        padding: 10px;
     }
   
 #header.scrolled {
@@ -61,7 +51,7 @@ nav{
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            @include for-phone{
+            @include sm{
                 width: 200px;
                 height: 40px;
                 margin-right: 50px;
@@ -89,7 +79,7 @@ nav{
                 }
             }
         }
-        @include for-phone{
+        @include sm{
             position: fixed;
             z-index: 3;
             // position:absolute;
@@ -109,15 +99,26 @@ nav{
                 padding:20px;
             }
         }
+        @include lg{
+            flex-direction: row;
+            transition: none;
+            position: static;
+            background-image: none;
+            height: auto;
+            padding: 0;
+        }
     }
     .hamburger{
         // position: fixed;
-        display:none;
+        display:block;
         z-index: 3;
         cursor:pointer;
         right:0;
-        @include for-phone{
+        @include sm{
             display:block;
+        }
+        @include lg{
+            display: none;
         }
         .bar{
             transition: 600ms;
@@ -155,13 +156,14 @@ nav{
     background-image: url('../assets/images/Stars.png');
     background-size: contain;
     font-family: $font-family;
-    @include for-phone{
+    @include sm{
         padding: 10px ;
         font-size: 0.7em;
         text-align: center;
         align-items: center;
-
-
+    }
+    @include md{
+        margin-top: 10%; 
     }
     
     h2{
@@ -170,9 +172,14 @@ nav{
         font-size: 6em;
         line-height: 120px;
         color: $blue;
-        @include for-phone{
+        @include sm{
             width: 100%;
             font-size: 4em;
+            line-height: 1em;
+        }
+        @include md{
+            width: 100%;
+            font-size: 4.5em;
             line-height: 1em;
         }
         
@@ -185,8 +192,12 @@ nav{
         padding-bottom: 30px;
         padding: 0;
         font-size: 1.2em;
-        @include for-phone{
+        @include sm{
             width:100%;
+        }
+        @include md{
+            font-size: 1.5em;
+            width: 80%;
         }
     }
     button{
@@ -206,8 +217,11 @@ nav{
 
 .desc-section{
     margin: 100px 350px;
-    @include for-phone{
+    @include sm{
         margin:40px 10px;
+    }
+    @include md{
+        margin:40px;
     }
     p{
         font-weight: 200;
@@ -224,15 +238,18 @@ nav{
     flex-direction: column;
     margin: 50px 100px;
     gap:30px;
-    @include for-phone{
+    @include sm{
         margin: 40px 10px;
+    }
+    @include md{
+        margin: 40px;
     }
     h2{
         padding:10px 0px;
         border-bottom: 3px solid $blue;
         width:30%;
         font-weight: 500;
-        @include for-phone{
+        @include sm{
             width: 70%;
         }
 
@@ -245,8 +262,11 @@ nav{
         .img-box{
             width: 70%;
             height: 700px;
-            @include for-phone{
+            @include sm{
                 height: auto;
+            }
+            @include md{
+                margin: 100px;
             }
             img{
                 max-width: 100%;
@@ -255,13 +275,13 @@ nav{
             &:nth-child(even){
                 align-self: flex-end;
                 .card{
-                    margin-left: -30%;
+                    margin-left: -20%;
                 }
                 
             }
             &:nth-child(odd){
                 .card{
-                    margin-left: 70%;
+                    margin-left: 60%;
                 }
                 
             }
@@ -275,7 +295,7 @@ nav{
                 opacity: 0.9;
                 background-color: white;
                 margin-top: -50%;
-                @include for-phone{
+                @include sm{
                     font-size: 0.6em;
                     padding:10px;
                 }
@@ -285,10 +305,13 @@ nav{
                     box-orient:vertical;
                     margin:0;
                     padding:0;
-                    @include for-phone{
+                    @include sm{
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                    }
+                    @include md{
+                        white-space: normal;
                     }
                 }
                 a{
@@ -296,7 +319,7 @@ nav{
                     text-decoration: none;
                     color: #021132;
                     align-self: end;
-                    @include for-phone{
+                    @include sm{
                         margin-top: 5px;
                     }
                 &:hover{
@@ -314,15 +337,18 @@ nav{
     margin: 50px 100px;
     display: flex;
     flex-direction: column;
-    @include for-phone{
+    @include sm{
         margin: 40px 10px;
+    }
+    @include md{
+        margin: 40px;
     }
     h2{
         padding: 10px 0px;
         border-bottom: 3px solid $blue;
         width:30%;
         font-weight: 500;
-        @include for-phone{
+        @include sm{
             width: 70%;
         }
     }
@@ -332,10 +358,14 @@ nav{
         align-content: space-between;
         justify-content: space-between;
         gap: 30px;
-        @include for-phone{
+        @include sm{
             flex-direction: column;
             text-align: center;
             align-items: center;
+        }
+        @include md{
+            flex-direction: row;
+            text-align: left;
         }
         .btn{
             height: max-content;
@@ -349,7 +379,7 @@ nav{
         }
         p:first-child{
             width:60%;
-            @include for-phone{
+            @include sm{
                 width: 100%;
             }
         }
@@ -360,8 +390,11 @@ nav{
             img{
                 width: 100%;
             }
-            @include for-phone{
+            @include sm{
                 display: none;
+            }
+            @include md{
+                display: block;
             }
         }
         .our-process-desc{
@@ -369,7 +402,7 @@ nav{
             width:60%;
             display: flex;
             flex-direction: column;
-            @include for-phone{
+            @include sm{
                 width: 100%;
             }
             h3{
@@ -377,7 +410,7 @@ nav{
                 font-size: 70px;
                 font-weight: 500;
                 color: #0E87C1;
-                @include for-phone{
+                @include sm{
                     font-size: 3em;
                 }
             }
@@ -428,7 +461,7 @@ footer{
         .terms-box{
             gap:10px;
             display: flex;
-            @include for-phone{
+            @include sm{
                 flex-direction: column;
                 gap: 0px;
             }
