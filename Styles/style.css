@@ -73,7 +73,7 @@ nav a .img-logo {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 576px) {
+@media (min-width: 993px) {
   nav a .img-logo {
     width: 300px;
     height: 100px;

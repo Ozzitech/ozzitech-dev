@@ -52,7 +52,7 @@ nav{
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            @include sm{
+            @include lg{
 
                 width:300px;
                 height: 100px;
