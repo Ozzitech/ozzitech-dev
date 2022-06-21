@@ -185,6 +185,8 @@ nav .active .bar:nth-child(3) {
 @media (min-width: 993px) {
   .intro {
     padding: 20px 100px;
+    text-align: left;
+    align-items: flex-start;
   }
 }
 .intro h2 {
@@ -207,7 +209,7 @@ nav .active .bar:nth-child(3) {
     width: 70%;
     font-weight: 300;
     font-size: 6em;
-    line-height: 120px;
+    line-height: 1.5em;
     text-align: left;
   }
 }
@@ -229,10 +231,11 @@ nav .active .bar:nth-child(3) {
 @media (min-width: 993px) {
   .intro p {
     width: 50%;
-    font-size: 18px;
-    line-height: 25px;
+    line-height: 1.5em;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 2em;
+    text-align: left;
+    align-self: flex-start;
   }
 }
 .intro button {
@@ -240,6 +243,13 @@ nav .active .bar:nth-child(3) {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+@media (min-width: 993px) {
+  .intro button {
+    margin-left: 20px;
+    margin-top: 30px;
+    align-self: flex-start;
+  }
 }
 .intro-img {
   background-image: url("../assets/images/Rocket.png");
@@ -346,6 +356,7 @@ nav .active .bar:nth-child(3) {
 @media (min-width: 993px) {
   .our-work .outer-box .img-box .card {
     padding: 25px 50px;
+    font-size: 1em;
   }
 }
 .our-work .outer-box .img-box .card p {
