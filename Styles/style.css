@@ -64,9 +64,7 @@ nav {
   align-items: center;
   justify-content: space-around;
 }
-<<<<<<< HEAD
 
-=======
 nav a .img-logo {
   background-image: url("../assets/logo/Ozzitech logo Light.png");
   width: 300px;
@@ -82,7 +80,6 @@ nav a .img-logo {
     margin-right: 50px;
   }
 }
->>>>>>> main
 nav .nav-list {
   display: flex;
   gap: 25px;
@@ -339,9 +336,7 @@ nav .active .bar:nth-child(3) {
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
 
-=======
 @media (max-width: 559px) {
   .our-work .outer-box .img-box .card p {
     white-space: nowrap;
@@ -349,7 +344,6 @@ nav .active .bar:nth-child(3) {
     text-overflow: ellipsis;
   }
 }
->>>>>>> main
 .our-work .outer-box .img-box .card a {
   margin-top: 20px;
   text-decoration: none;
@@ -1522,15 +1516,11 @@ ul {
 
   .section_content_image {
     padding-left: 75px;
-<<<<<<< HEAD
     padding-right: 75px;
-=======
->>>>>>> main
   }
 
   .section_content_image_para {
     padding-left: 75px;
-<<<<<<< HEAD
     padding-right: 75px;
   }
 
@@ -1607,8 +1597,6 @@ ul {
 
   .img_content_home {
     font-size: 70px;
-=======
->>>>>>> main
   }
 
   .image_text_homepage {
@@ -1807,7 +1795,7 @@ ul {
   }
 }
 
-
+}
 
 
 /*# sourceMappingURL=style.css.map */
