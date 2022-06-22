@@ -6,13 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="container">
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="logo" width="250" height="60"></a>
+      <a href="/"><img class="ozzi_logo"src="logo.png"></a>
+      
       <ul class="menu">
         <li>
           <a class="header_menu" href="ABOUT US.html" aria-current="page">ABOUT US</a>
@@ -30,7 +31,7 @@
             <a class="header_menu" href="BLOG.html" aria-current="page">BLOG</a>
           </li>
         <li>
-          <a class="header_menu" href="contact.html">CONTACT</a>
+          <a class="header_menu" href="contact_responsive.html">CONTACT</a>
         </li>
       </ul>
     </div>
@@ -38,73 +39,86 @@
       We’re Hiring
     </div>
     <div class="hiring_content">
-      <p>We’ve established our development center in India and are looking to grow and expand our base.</p>
+      <p>We’ve established our development center in India and are looking <br>to grow and expand our base.</p>
 
-      <p style="margin-top: 55px;">With years of experience building world class web and mobile applications, we work
-        with the latest and greatest in front-end technology and build state-of-the-art, high performant engaging
+      <p style="margin-top: 10px;">With years of experience building world class web and mobile<br>applications, we work
+        with the latest and greatest in front-end <br>technology and build state-of-the-art, high performant engaging<br>
         digital experiences for our client.</p>
 
-      <p style="margin-top: 55px;">We create leaders who can take us into the next phase of growth. Come become a part
-        of our journey as we provide a platform for you to grow, to learn and to share. We pride ourselves in the fact
+      <p style="margin-top: 10px;">We create leaders who can take us into the next phase of growth.<br>Come become a part
+        of our journey as we provide a platform for<br> you to grow, to learn and to share. We pride ourselves in the fact<br>
         that our staff are the biggest asset of our team.</p>
 
-      <p style="margin-top: 55px;">Work with industry experts using the latest in tech on projects that<br> you will be
+      <p style="margin-top: 10px;">Work with industry experts using the latest in tech on projects that<br> you will be
         proud of.</p>
     </div>
-   <div class="hiring_img"> <img src="images/Coding-light.png" alt="logo" width="100" height="200"></div>
+ 
     <div class="heading_hiring">
       Apply Now
     </div>
     <div class="hiring_cont">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada vehicula tincidunt.
     </div>
-    <div class="contact">
-      <label for="fname">Hello, my name is</label>
-    </div>
-    <input type="text">
-    <div class="contact">
-      <label for="fname">I want to talk to apply for</label>
-    </div>
-    <input type="text">
-    <div class="contact">
-      <label for="fname">my email is</label>
-    </div>
-    <input type="text">
-    <div class="contact">
-      <label for="fname">my phone number is</label>
-    </div>
-    <input type="text">
-    <div class="contact">
-      <label for="fname">here’s more info</label>
-    </div>
-    <textarea name="note" class="form-field-text" rows="6" cols="20"></textarea>
-    <div class="banner_button">
-      <a class="btn" href="/contact">
-        <span class="btn-inner">SUBMIT</span>
-      </a>
-    </div>
-  </div>
-  <hr class="new4">
-  <div class="footer">
-    <div class="container">
-      <div class="footer-section row">
-        <div class="footer-logo col-sm-4">
-          <img src="images/logo.png" alt="logo" width="110" height="30">
-        </div>
-        <div class="footer col-sm-4">
-          &copy; Ozzitech
-        </div>
-        <div class="footer col-sm-4">
-          <span>Privacy Policy</span>
-          <span style="margin-left: 40px;">Terms & conditions</span>
-        </div>
+    <div class="contact-form">
+      <form class="contact-form-wrapper" name="myForm" onsubmit="validateForm(event)">  
+
+                    <div class="contact">
+                    <label for="name">Hello, my name is</label></div>
+                    <input type="text" name ="name">
+                    <span class="error" id="errorname"></span>
+
+                    <div class="contact">
+                    <label for="short_msg">I want to talk to you about</label></div>
+                    <input type="text" name="short_msg">
+                    <span class="error" id="errorshort_msg"></span>
+
+
+                    <div class="contact">
+                    <label for="email">my email is</label></div>
+                    <input type="text" name="email">
+                    <span class="error" id="erroremail"></span>
+
+                    <div class="contact">
+                    <label for="num">my phone number is</label></div>
+                    <input type="text" name="num">
+                    <span class="error" id="errornum"></span>
+                  
+
+                    <div class="contact">
+                    <label for="info">here’s more info</label></div>
+                    <textarea  class="msg box" name="msg" rows="2" cols="10"></textarea></div>
+                    <span class="error" id="errormsg"></span>
+
+                  <button type="submit" class="btn"><span class="btn-inner">Submit</span></button> 
+                  
+            </form>        
+          </div>      
+         </div>
+       </div>
       </div>
-    </div>
 
-    <div class="container">
-      <img src="images/icon.png" alt="logo" width="90" height="28">
-    </div>
-
+      <div class="footer">
+        <div class="grid-container">
+           <div class="icons"></div>
+              <div class="footer_logo">
+              <img src="logo.png" alt="logo" width="200" height="50" style="margin-left: 95px;">
+             </div>
+            <div class="copyright">
+            &copy; Ozzitech
+           </div>
+            <div class="footer-menu">
+            <span class="spn1" style="margin-left: 40px;">Terms &amp; conditions</span>
+            <span class="policy">Privacy Policy</span>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="icons"></div>
+          <div class="footer_logo flogo" style="margin-left: 75px;">
+            <a href="#"class="footer_icon icn" ><i class='bx bx-envelope'></i></a>
+            <a href="#"class="footer_icon icn" ><i class='bx bxl-linkedin' ></i></a>
+            <a href="#" class="footer_icon" ><i class="bx bxl-facebook-circle"></i></a>
+          </div>
+        </div>
   </div>
   </div>
 </body>

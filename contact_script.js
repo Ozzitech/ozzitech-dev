@@ -8,6 +8,7 @@ function validateForm(event)
     var email = document.forms["myForm"]["email"]; 
     var num = document.forms["myForm"]["num"];   
     var msg = document.forms["myForm"]["msg"];   
+
    
     if (name.value == "")                                  
     { 
