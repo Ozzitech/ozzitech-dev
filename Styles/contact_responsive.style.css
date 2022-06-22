@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500");
 html {
   scroll-behavior: smooth;
 }
@@ -79,7 +79,7 @@ body {
     background: transparent;
     border: 0;
     border-bottom: 1px solid rgba(254, 254, 254, 0.6);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
     outline: none;
     width: 100%;
   }
@@ -87,7 +87,7 @@ body {
     background: transparent;
     border: 1px solid rgba(254, 254, 254, 0.6);
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
     margin-top: 1rem;
     font-family:'Montserrat', sans-serif;
     padding: 1rem;
@@ -135,9 +135,45 @@ body {
   color: #D8000C;
   background-color: #FFBABA;
 }
+.message
+{
+  width:100%;
+  position:relative;
+  margin-bottom:60px;
+  display:flex;
+  justify-content:center;
+}
+.message .success
+{
+  font-size:20px;
+  color:green;
+  position:absolute;
+  animation:button .3s linear;
+  display:none;
+}
+.message .danger
+{
+  font-size:20px;
+  color:red;
+  position:absolute;
+  animation:button .3s linear;
+  display:none;
+}
+@keyframes buttons{
+  0%{
+    transform:scale(0.1);
+  }
+ 50%{
+    transform:scale(0.5);
+  }
+  10
+  100%{
+    transform:scale(1);
+  }
+}
 
 @media screen and (max-width: 768px){
-.ozzi_logo,.logo{width: 75%;}
+.ozzi_logo,.logo{width: 65%;}
 .contact-title{
   line-height: 10px;
     font-size: 60px;
@@ -153,7 +189,18 @@ body {
 .flogo{margin-bottom: 30px;}
 }
 @media screen and (max-width: 320px){
-  .contact_menu{
-    font-size:14px;
-  }
+  .contact_menu{font-size:12px;}
+  .contact-title{ font-size: 35px;}
+  .contact-para{font-size:12px;}
+  .policy{font-size: 13px;}
+  .spn1{font-size:13px;}
+  .contact{font-size:10px;}
+
+}
+@media screen and (max-width: 576px){
+  .contact_menu{font-size:12px;}
+  .contact-title{ font-size: 50px;}
+  .contact-para{font-size:18px;}
+  .contact{font-size:12px;}
+
 }
