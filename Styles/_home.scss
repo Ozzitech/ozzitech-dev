@@ -84,20 +84,18 @@
             padding:20px;
         }
         .nav-item{
+            margin-left: 10%;
             list-style-type: none;
             .nav-link{
                 text-decoration: none;
                 font-family: 'Montserrat';
                 font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
+                font-weight: 300;
+                font-size: 1.5rem;
                 line-height: 22px;
                 text-align: right;
                 text-transform: uppercase;
-                color: #FFFFFF;
-                &:hover{
-                    color:$blue;
-                }
+                color: $blue;
             }
         }
         @include xl{
@@ -107,6 +105,16 @@
             background-image: none;
             height: auto;
             padding: 0;
+            .nav-item{
+                .nav-link{
+                    color: #FFFFFF;
+                    &:hover{
+                        color:$blue;
+                    }
+
+                }
+            }
+
         }
     }
     .hamburger{
@@ -127,7 +135,7 @@
             border-radius: 5px;
             display:block;
             margin:7px;
-            background-color:white;
+            background-color:$blue;
         }
     }
     .active{
@@ -163,6 +171,7 @@
         padding: 20px 100px;
         text-align: left;
         align-items: flex-start;
+        margin-top: 10%;
     }
 
     h2{
