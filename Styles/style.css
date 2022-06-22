@@ -26,6 +26,7 @@ body {
 #header {
   z-index: 1;
   position: fixed;
+  display: flex;
   left: 0;
   top: 0;
   width: 100%;
@@ -38,6 +39,7 @@ body {
   transition: all 0.3s ease;
 }
 
+/*button styles*/
 .btn {
   background: linear-gradient(270deg, #0e87c1, #500ec1);
   border: none;
@@ -164,6 +166,7 @@ body {
   right: 0px !important;
 }
 
+/*Intro Section*/
 .intro {
   display: flex;
   flex-direction: column;
@@ -261,6 +264,7 @@ body {
   background-size: contain;
 }
 
+/*Decription Section*/
 .desc-section {
   margin: 40px 10px;
 }
@@ -283,6 +287,7 @@ body {
   padding: 0;
 }
 
+/*Our Work Section*/
 .our-work {
   display: flex;
   flex-direction: column;
@@ -368,13 +373,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (min-width: 576px) {
-  .our-work .outer-box .img-box .card p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
 @media (min-width: 768px) {
   .our-work .outer-box .img-box .card p {
     white-space: normal;
@@ -396,6 +394,7 @@ body {
   font-weight: 600;
 }
 
+/*Our Process Section*/
 .our-process {
   margin: 40px 10px;
   display: flex;
@@ -499,6 +498,7 @@ body {
   font-size: 1em;
 }
 
+/*Footer Section*/
 footer {
   border-top: 2px solid rgba(14, 135, 193, 0.8);
 }
@@ -554,7 +554,6 @@ footer .footer-box .ozzitech-info .socials div img {
 }
 footer .footer-box .terms-box {
   flex-direction: column;
-  gap: 0px;
   display: flex;
 }
 @media (min-width: 993px) {
