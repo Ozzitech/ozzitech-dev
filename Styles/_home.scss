@@ -242,13 +242,19 @@
     }
     &-img{
         background-image: url('../assets/images/Rocket.png');
-        width:180px;
+        width:100px;
         height: 180px;
         margin-top: 20px;
-
         align-self: flex-end;
         background-repeat: no-repeat;
         background-size: contain;
+        @include md{
+            width: 150px;
+        }
+        @include lg{
+            width: 180px;
+        }
+
     }
 }
 
