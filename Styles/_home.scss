@@ -308,17 +308,24 @@
     .outer-box{
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
         
         .img-box{
-            width: 70%;
+            width: 60%;
             height: auto;
+            margin-bottom: 3rem;
+            @include sm{
+                margin-bottom: 100px;
+            }
+            // @include sm{
+            //     margin-bottom: 200px;
+            // }
             @include md{
-                margin: 100px;
+                margin-bottom: 200px;
             }
-            @include xl{
-                height: 700px;
-            }
+            // @include xl{
+            //     height: 700px;
+            // }
             img{
                 max-width: 100%;
                 max-height: 100%;
@@ -334,9 +341,7 @@
                 .card{
                     margin-left: 60%;
                 }
-                
             }
-
             .card{
                 display: flex;
                 flex-direction: column;
@@ -345,7 +350,7 @@
                 opacity: 0.9;
                 background-color: white;
                 margin-top: -50%;
-                font-size: 0.6em;
+                font-size: 0.5rem;
                 padding:10px;
                 @include xl{
                     padding: 25px 50px;
@@ -386,7 +391,7 @@
 /*Our Process Section*/
 
 .our-process{
-    margin: 40px 10px;
+    margin: 100px 10px;
     display: flex;
     flex-direction: column;
     @include md{

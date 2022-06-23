@@ -354,20 +354,21 @@ body {
 .our-work .outer-box {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 .our-work .outer-box .img-box {
-  width: 70%;
+  width: 60%;
   height: auto;
+  margin-bottom: 3rem;
+}
+@media (min-width: 576px) {
+  .our-work .outer-box .img-box {
+    margin-bottom: 100px;
+  }
 }
 @media (min-width: 768px) {
   .our-work .outer-box .img-box {
-    margin: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .our-work .outer-box .img-box {
-    height: 700px;
+    margin-bottom: 200px;
   }
 }
 .our-work .outer-box .img-box img {
@@ -391,7 +392,7 @@ body {
   opacity: 0.9;
   background-color: white;
   margin-top: -50%;
-  font-size: 0.6em;
+  font-size: 0.5rem;
   padding: 10px;
 }
 @media (min-width: 1200px) {
@@ -432,7 +433,7 @@ body {
 
 /*Our Process Section*/
 .our-process {
-  margin: 40px 10px;
+  margin: 100px 10px;
   display: flex;
   flex-direction: column;
 }
