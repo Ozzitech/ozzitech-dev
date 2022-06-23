@@ -3,20 +3,7 @@
 	padding-right: 0 !important;
 }
 
-#header{
-        z-index: 1;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        padding: 20px;
-    }
-  
-#header.scrolled {
-      background: rgba(14, 5, 42, 0.9);
-      color: #e0e0e0;
-    transition: all 0.3s ease;
-  }
+/*button styles*/
 
 .btn {
 	background: linear-gradient(270deg, #0e87c1, #500ec1);
@@ -27,18 +14,37 @@
 	cursor: pointer;
 	display: block;
 	font-size: 1.2rem;
-  }
+}
   
-  .btn-inner {
+.btn-inner {
 	background-color: rgba(13, 1, 37, .9);
 	border-radius: 33px;
 	display: inline-block;
 	margin: 2px;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
-  }
+}
+
+/*Header Section*/
+
+#header{
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0;
+    }
+  
+#header.scrolled {
+      background: rgba(14, 5, 42, 0.9);
+      color: #e0e0e0;
+    transition: all 0.3s ease;
+}
 
 .nav-menu{
+    padding: 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,7 +59,10 @@
             background-repeat: no-repeat;
             background-position: center;
             @include lg{
-
+                width:250px;
+                height: 100px;
+            }
+            @include xl{
                 width:300px;
                 height: 100px;
             }
@@ -74,36 +83,49 @@
         width:100%;
         height: 100vh;
         transition: 1s ease;
-        right: -1000px;
+        right: -1300px;
         flex-direction: column;
-        li{
-            padding:20px;
-        }
         .nav-item{
+            margin-left: 10%;
             list-style-type: none;
+            @include xxl{
+                padding: 20px !important;
+            }
             .nav-link{
                 text-decoration: none;
                 font-family: 'Montserrat';
                 font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
+                font-weight: 300;
+                font-size: 1.5rem;
                 line-height: 22px;
                 text-align: right;
                 text-transform: uppercase;
-                color: #FFFFFF;
-                &:hover{
-                    color:$blue;
-                }
+                color: $blue;
             }
         }
-        @include lg{
+        @include xl{
+            justify-content: end;
             flex-direction: row;
             transition: none;
             position: static;
             background-image: none;
             height: auto;
             padding: 0;
+            .nav-item{
+                margin-left: 0;
+                padding: 0;
+                .nav-link{
+                    white-space: nowrap;
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    &:hover{
+                        color:$blue;
+                    }
+
+                }
+            }
         }
+
     }
     .hamburger{
         display:block;
@@ -113,7 +135,7 @@
         @include sm{
             display:block;
         }
-        @include lg{
+        @include xl{
             display: none;
         }
         .bar{
@@ -123,7 +145,7 @@
             border-radius: 5px;
             display:block;
             margin:7px;
-            background-color:white;
+            background-color:$blue;
         }
     }
     .active{
@@ -138,73 +160,68 @@
         }
     }
 }
-
 .active{
     right:0px !important;
-    // display:block !important;
 }
+
+/*Intro Section*/
 
 .intro{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 10px;
-    margin-top: 10%;
+    margin-top: 15%;
     background-image: url('../assets/images/Stars.png');
     background-size: contain;
     font-family: $font-family;
-    @include sm{
-        padding: 10px ;
-        font-size: 0.7em;
-        text-align: center;
-        align-items: center;
-    }
+    text-align: center;
+    align-items: center;
     @include lg{
         padding: 20px 100px;
         text-align: left;
         align-items: flex-start;
+        margin-top: 10%;
     }
-    
+
     h2{
         width: 100%;
-        font-size: 3em;
+        font-size: 2.5rem;
         line-height: 1em;
         color: $blue;
-        font-weight: 400;
+        font-weight: 300;
         text-align: center;
+        @include sm{
+            font-size: 4rem;
+        }
 
         @include md{
             width: 100%;
-            font-size: 4.5em;
-            line-height: 1em;
         }
         @include lg{
             width: 70%;
-            font-weight: 300;
             font-size: 6em;
-            line-height: 1.5em;
             text-align: left;
-    
         }
         
     }
     p{
         color: #FFFFFF;
-        font-size: 1em;
+        font-size: 1rem;
+        font-weight: 200;
         width: 80%;
         padding: 0;
         margin-bottom: 20px;
         text-align: center;
         align-self: center;
         @include md{
-            font-size: 1.5em;
+            font-size: 1.3rem;
             width: 80%;
         }
         @include lg{
             width: 50%;
-            line-height: 1.5em;
             padding: 0;
-            font-size: 2em;
+            font-size: 1.2rem;
             text-align: left;
             align-self: flex-start;
         }
@@ -213,22 +230,35 @@
         align-self: center;
         max-width: max-content;
         @include lg{
-            margin-left: 20px;
+            margin-left: 0px;
             margin-top: 30px;
             align-self:flex-start;
         }
+
+    .btn-inner{
+        padding: 0.5em 2em;
+        font-size: 0.8em;
+    }
     }
     &-img{
         background-image: url('../assets/images/Rocket.png');
-        width:180px;
+        width:100px;
         height: 180px;
         margin-top: 20px;
-
         align-self: flex-end;
         background-repeat: no-repeat;
         background-size: contain;
+        @include md{
+            width: 150px;
+        }
+        @include lg{
+            width: 180px;
+        }
+
     }
 }
+
+/*Decription Section*/
 
 .desc-section{
     margin:40px 10px;
@@ -236,12 +266,15 @@
         margin:40px;
     }
     @include lg{
+        margin: 50px 200px;
+    }
+    @include xl{
         margin: 100px 350px;
 
     }
     p{
         font-weight: 200;
-        font-size: 16px;
+        font-size: clamp(0.5rem,1rem,1.2rem);
         line-height: 1.5;
         color: #FFFFFF;
         text-align: center;
@@ -249,17 +282,17 @@
     }
 }
 
+/*Our Work Section*/
+
 .our-work{
     display:flex;
     flex-direction: column;
     margin: 40px 10px;
     gap:30px;
-    @include sm{
-    }
     @include md{
         margin: 40px;
     }
-    @include lg{
+    @include xl{
         margin: 50px 100px;
     }
     h2{
@@ -267,7 +300,7 @@
         border-bottom: 3px solid $blue;
         width: 70%;
         font-weight: 500;
-        @include lg{
+        @include xl{
             width:30%;
         }
 
@@ -275,17 +308,24 @@
     .outer-box{
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
         
         .img-box{
-            width: 70%;
+            width: 60%;
             height: auto;
+            margin-bottom: 3rem;
+            @include sm{
+                margin-bottom: 100px;
+            }
+            // @include sm{
+            //     margin-bottom: 200px;
+            // }
             @include md{
-                margin: 100px;
+                margin-bottom: 200px;
             }
-            @include lg{
-                height: 700px;
-            }
+            // @include xl{
+            //     height: 700px;
+            // }
             img{
                 max-width: 100%;
                 max-height: 100%;
@@ -301,9 +341,7 @@
                 .card{
                     margin-left: 60%;
                 }
-                
             }
-
             .card{
                 display: flex;
                 flex-direction: column;
@@ -312,12 +350,11 @@
                 opacity: 0.9;
                 background-color: white;
                 margin-top: -50%;
-                font-size: 0.6em;
+                font-size: 0.5rem;
                 padding:10px;
-                @include lg{
+                @include xl{
                     padding: 25px 50px;
                     font-size: 1em;
-
                 }
                 p{
                     color: #021132;
@@ -327,11 +364,6 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    @include sm{
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
                     @include md{
                         white-space: normal;
                     }
@@ -341,7 +373,7 @@
                     color: #021132;
                     align-self: end;
                     margin-top: 5px;
-                    @include lg{
+                    @include xl{
                         margin-top: 20px;
 
                     }
@@ -356,14 +388,19 @@
     }   
 }
 
+/*Our Process Section*/
+
 .our-process{
-    margin: 40px 10px;
+    margin: 100px 10px;
     display: flex;
     flex-direction: column;
     @include md{
         margin: 40px;
     }
     @include lg{
+        margin-top: 200px;
+    }
+    @include xl{
         margin: 50px 100px;
     }
     h2{
@@ -371,7 +408,7 @@
         border-bottom: 3px solid $blue;
         width:70%;
         font-weight: 500;
-        @include lg{
+        @include xl{
             width: 30%;
         }
     }
@@ -388,6 +425,10 @@
             flex-direction: row;
             text-align: left;
         }
+        .btn-inner{
+            padding: 0.5em 2em;
+            font-size: 0.8em;
+        }
         .btn{
             height: max-content;
         }
@@ -395,17 +436,25 @@
         p{
             padding: 0;
             font-weight: 300;
-            font-size: 18px;
-            line-height: 35px;
+            font-size: 1rem;
+            line-height: 35px;        @include md{
+                font-size: 1.3rem;
+                width: 80%;
+            }
+            @include lg{
+                font-size: 1.3rem;
+            }
+
         }
         p:first-child{
             width: 100%;
             @include lg{
+                width:50%;
+            }
+            @include xl{
                 width:60%;
-
             }
         }
-
         .img-box{
             display: none;
 
@@ -415,50 +464,60 @@
             @include md{
                 display: block;
             }
-            @include lg{
+            @include xl{
                 height: full;
                 width: 30%;
             }
         }
         .our-process-desc{
-            
             width:100%;
             display: flex;
             flex-direction: column;
-            @include lg{
+            @include xl{
                 width: 60%;
             }
             h3{
                 margin: 0;
-                font-size: 2.3em;
+                font-size: 2.3rem;
                 font-weight: 500;
                 color: #0E87C1;
-                @include sm{
-                    font-size: 3em;
+                @include xl{
+                    font-size: 5rem;
                 }
             }
             p{
                 font-size: 1em;
+                @include lg{
+                    font-size: 1.3rem;
+                }
             }
-            
-
         }
     }
-
 }
+
+/*Footer Section*/
 
 footer{
     border-top: 2px solid $blue;
+    display: flex;
     .footer-box{
-        margin: 30px;
-        font-size: 0.7em;
+        width: 100%;
+        margin: 30px 10px;
+        font-size: 0.5rem;
         font-weight: 200;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        @include sm{
+            justify-content: space-around;
+            font-size: 0.7rem;
+        }
         @include md{
+            margin: 30px;
             font-size: 1em;
         }
         p{
+            margin: 0;
             padding: 0;
             font-size: 1em;
         }
@@ -487,22 +546,18 @@ footer{
                     @include md{
                         width:40px;
                         height: 40px;
-    
-
                     }
                     img{
                         height: 100%;
                         width: 100%;
-                        
                     }
                 }
             }
         }
         .terms-box{
             flex-direction: column;
-            gap: 0px;
             display: flex;
-            @include lg{
+            @include xl{
                 gap:30px;
                 flex-direction: row;
 
