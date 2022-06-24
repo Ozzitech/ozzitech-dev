@@ -68,7 +68,7 @@ body {
 }
 .contact-form-wrapper {
 	width: 100%;
-  align:left;
+  text-align:left;
   font-family:'Montserrat', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -126,7 +126,7 @@ body {
   grid-template-columns: auto auto auto auto auto auto;
   color:White;
   margin-top: 12px;
-  align:left;
+  text-align:left;
 }
 .policy{
   margin-left: 40px;;
