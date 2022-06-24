@@ -62,7 +62,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .contact-form-wrapper {
-	width: 100%;
+	width: 50%;
   text-align:left;
   font-family:'Montserrat', sans-serif;
 	font-weight: 300;
@@ -111,7 +111,6 @@ body {
 .footer {
     border-top: 2px solid rgba(14,135,193,.65);
     margin-top: 60px;
-  width: 50%;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -335,9 +334,19 @@ textarea {
   .policy {
     font-size: 18px;
   }
-  .copyright {
-    font-size: 18px;
-  }
+.copyright {
+  font-size: 14px;
+  text-align: center;
+}
+.footer{
+  line-height: 14px;
+}
+.footer_logo{
+  text-align: center;
+}
+.footer-menu{
+  text-align: center;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -368,6 +377,16 @@ textarea {
   }
   .copyright {
     font-size: 14px;
+    text-align: center;
+  }
+  .footer{
+    line-height: 14px;
+  }
+  .footer_logo{
+    text-align: center;
+  }
+  .footer-menu{
+    text-align: center;
   }
 }
 @media screen and (max-width: 320px) {
@@ -398,5 +417,12 @@ textarea {
   }
   .copyright {
     font-size: 14px;
+    text-align: center;
+  }
+  .footer{
+    line-height: 14px;
+  }
+  .footer_logo{
+    text-align: center;
   }
 }

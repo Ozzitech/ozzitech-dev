@@ -409,6 +409,7 @@ textarea {
   }
   .copyright {
     font-size: 18px;
+    text-align: center;
   }
 
   input {
@@ -418,6 +419,16 @@ textarea {
   textarea {
     width: 80%;
     line-height: 32px;
+  }
+
+  .footer{
+    line-height: 14px;
+  }
+  .footer_logo{
+    text-align: center;
+  }
+  .footer-menu{
+    text-align: center;
   }
 }
 
@@ -519,6 +530,7 @@ textarea {
   }
   .copyright {
     font-size: 15px;
+    text-align: center;
   }
 
   input {
@@ -528,6 +540,15 @@ textarea {
   textarea {
     width: 80%;
     line-height: 32px;
+  }
+  .footer{
+    line-height: 14px;
+  }
+  .footer_logo{
+    text-align: center;
+  }
+  .footer-menu{
+    text-align: center;
   }
 }
 
@@ -640,6 +661,7 @@ textarea {
   }
   .copyright {
     font-size: 12px;
+    text-align: center;
   }
   .contact-form-wrapper {
     line-height: 28px;
@@ -651,5 +673,14 @@ textarea {
   textarea {
     width: 80%;
     line-height: 32px;
+  }
+  .footer{
+    line-height: 14px;
+  }
+  .footer_logo{
+    text-align: center;
+  }
+  .footer-menu{
+    text-align: center;
   }
 }
