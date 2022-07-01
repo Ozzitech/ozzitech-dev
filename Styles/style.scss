@@ -1,7 +1,8 @@
-@import './variables';
-@import './breakpoints';
-@import './main';
-@import './home';
-@import './poster';
+@import './abstracts/variables';
+@import './abstracts/breakpoints';
+@import './base/main';
+@import './pages/home';
+@import './pages/poster';
+@import './layout/header';
 
 

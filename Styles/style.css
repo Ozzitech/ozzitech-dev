@@ -51,148 +51,6 @@ body {
 }
 
 /*Header Section*/
-#header {
-  z-index: 1;
-  position: fixed;
-  display: flex;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding: 0;
-}
-
-#header.scrolled {
-  background: rgba(14, 5, 42, 0.9);
-  color: #e0e0e0;
-  transition: all 0.3s ease;
-}
-
-.nav-menu {
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.nav-menu a .img-logo {
-  background-image: url("../assets/logo/Ozzitech logo Light.png");
-  width: 200px;
-  height: 40px;
-  margin-right: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-@media (min-width: 993px) {
-  .nav-menu a .img-logo {
-    width: 250px;
-    height: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .nav-menu a .img-logo {
-    width: 300px;
-    height: 100px;
-  }
-}
-.nav-menu .nav-list {
-  display: flex;
-  gap: 25px;
-  position: fixed;
-  z-index: 3;
-  background-image: linear-gradient(rgb(32, 8, 37), rgb(8, 8, 19));
-  padding: 60px 0;
-  right: 0;
-  top: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  transition: 1s ease;
-  right: -1300px;
-  flex-direction: column;
-}
-.nav-menu .nav-list .nav-item {
-  margin-left: 10%;
-  list-style-type: none;
-}
-@media (min-width: 1400px) {
-  .nav-menu .nav-list .nav-item {
-    padding: 20px !important;
-  }
-}
-.nav-menu .nav-list .nav-item .nav-link {
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 22px;
-  text-align: right;
-  text-transform: uppercase;
-  color: rgba(14, 135, 193, 0.8);
-}
-@media (min-width: 1200px) {
-  .nav-menu .nav-list {
-    justify-content: end;
-    flex-direction: row;
-    transition: none;
-    position: static;
-    background-image: none;
-    height: auto;
-    padding: 0;
-  }
-  .nav-menu .nav-list .nav-item {
-    margin-left: 0;
-    padding: 0;
-  }
-  .nav-menu .nav-list .nav-item .nav-link {
-    white-space: nowrap;
-    font-size: 1rem;
-    color: #FFFFFF;
-  }
-  .nav-menu .nav-list .nav-item .nav-link:hover {
-    color: rgba(14, 135, 193, 0.8);
-  }
-}
-.nav-menu .hamburger {
-  display: block;
-  z-index: 3;
-  cursor: pointer;
-  right: 0;
-}
-@media (min-width: 576px) {
-  .nav-menu .hamburger {
-    display: block;
-  }
-}
-@media (min-width: 1200px) {
-  .nav-menu .hamburger {
-    display: none;
-  }
-}
-.nav-menu .hamburger .bar {
-  transition: 600ms;
-  width: 30px;
-  height: 4px;
-  border-radius: 5px;
-  display: block;
-  margin: 7px;
-  background-color: rgba(14, 135, 193, 0.8);
-}
-.nav-menu .active .bar:nth-child(2) {
-  opacity: 0;
-}
-.nav-menu .active .bar:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
-.nav-menu .active .bar:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-.active {
-  right: 0px !important;
-}
-
 /*Intro Section*/
 .intro {
   display: flex;
@@ -705,4 +563,146 @@ footer .footer-box .terms-box {
 .poster-content div img {
   width: 100%;
   height: auto;
+}
+
+#header {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+}
+
+#header.scrolled {
+  background: rgba(14, 5, 42, 0.9);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-menu a .img-logo {
+  background-image: url("../assets/logo/Ozzitech logo Light.png");
+  width: 200px;
+  height: 40px;
+  margin-right: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 993px) {
+  .nav-menu a .img-logo {
+    width: 250px;
+    height: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-menu a .img-logo {
+    width: 300px;
+    height: 100px;
+  }
+}
+.nav-menu .nav-list {
+  display: flex;
+  gap: 25px;
+  position: fixed;
+  z-index: 3;
+  background-image: linear-gradient(rgb(32, 8, 37), rgb(8, 8, 19));
+  padding: 60px 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  transition: 1s ease;
+  right: -1300px;
+  flex-direction: column;
+}
+.nav-menu .nav-list .nav-item {
+  margin-left: 10%;
+  list-style-type: none;
+}
+@media (min-width: 1400px) {
+  .nav-menu .nav-list .nav-item {
+    padding: 20px !important;
+  }
+}
+.nav-menu .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 22px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(14, 135, 193, 0.8);
+}
+@media (min-width: 1200px) {
+  .nav-menu .nav-list {
+    justify-content: end;
+    flex-direction: row;
+    transition: none;
+    position: static;
+    background-image: none;
+    height: auto;
+    padding: 0;
+  }
+  .nav-menu .nav-list .nav-item {
+    margin-left: 0;
+    padding: 0;
+  }
+  .nav-menu .nav-list .nav-item .nav-link {
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+  .nav-menu .nav-list .nav-item .nav-link:hover {
+    color: rgba(14, 135, 193, 0.8);
+  }
+}
+.nav-menu .hamburger {
+  display: block;
+  z-index: 3;
+  cursor: pointer;
+  right: 0;
+}
+@media (min-width: 576px) {
+  .nav-menu .hamburger {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-menu .hamburger {
+    display: none;
+  }
+}
+.nav-menu .hamburger .bar {
+  transition: 600ms;
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  margin: 7px;
+  background-color: rgba(14, 135, 193, 0.8);
+}
+.nav-menu .active .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-menu .active .bar:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+.nav-menu .active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.active {
+  right: 0px !important;
 }/*# sourceMappingURL=style.css.map */
