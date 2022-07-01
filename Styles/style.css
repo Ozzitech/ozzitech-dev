@@ -19,16 +19,6 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
 /*button styles*/
 .btn {
   background: linear-gradient(270deg, #0e87c1, #500ec1);

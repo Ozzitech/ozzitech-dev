@@ -3,6 +3,7 @@
 <head>
   <title>Hiring</title>
   <link rel="stylesheet" href="styles/hiring.style.css">
+  <link rel="stylesheet" href="./Styles/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -10,31 +11,40 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <a href="/"><img class="ozzi_logo"src="images/logo.png"></a>
-      
-      <ul class="menu">
-        <li>
-          <a class="header_menu" href="ABOUT US.html" aria-current="page">ABOUT US</a>
-        </li>
-        <li>
-          <a class="header_menu" href="OUR WORK.html" aria-current="page">OUR WORK</a>
-        </li>
-        <li>
-          <a class="header_menu" href="OUR PROCESS.html" aria-current="page">OUR PROCESS</a>
-        </li>
-        <li>
-          <a class="header_menu" href="OUR SERVICES.html" aria-current="page">OUR SERVICES</a>
-        </li>
-        <li>
-            <a class="header_menu" href="BLOG.html" aria-current="page">BLOG</a>
-          </li>
-        <li>
-          <a class="header_menu" href="contact_responsive.html">CONTACT</a>
-        </li>
-      </ul>
-    </div>
-    <div class="heading_contact">
+    <header id="header" class="top">
+      <nav class="nav-menu">
+          <a href="./home.html">
+              <div class="img-logo">
+
+              </div>
+          </a>
+          <ul class="nav-list">
+              <li class="nav-item">
+                  <a href="./home.html" class="nav-link">About us</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link"> Our work</a>
+              </li>
+              <li class="nav-item">
+                  <a href="./ourprocess.html" class="nav-link">our process</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">our services</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">blog</a>
+              </li>
+              <li class="nav-item">
+                  <a href="./contact_responsive.html" class="nav-link">contact</a>
+              </li>
+          </ul>
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+  </header>     <div class="heading_contact">
       We’re Hiring
     
     <div class="hiring_content">
@@ -129,6 +139,7 @@
         </div>
   </div>
   </div>
+  <script src="./js/home.js"></script>
 </body>
 
 </html>
