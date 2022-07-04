@@ -1,5 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
+$breakpoints:(
+    "xs":0,
+    "sm":576px,
+    "md":768px,
+    "lg":993px,
+    "xl":1200px,
+    "xxl":1400px
+);
 
-$font-family:'Montserrat', serif;
+@mixin  xs {
+    @media(min-width: map-get($breakpoints,"xs")){
+        @content;
+    }
+    
+}
+@mixin  sm {
+    @media(min-width: map-get($breakpoints,"sm")){
+        @content;
+    }
+    
+}
+@mixin  md {
+    @media(min-width: map-get($breakpoints,"md")){
+        @content;
+    }
+    
+}
+@mixin  lg {
+    @media(min-width: map-get($breakpoints,"lg")){
+        @content;
+    }
+    
+}
+@mixin  xl {
+    @media(min-width: map-get($breakpoints,"xl")){
+        @content;
+    }
+    
+}
+@mixin  xxl {
+    @media(min-width: map-get($breakpoints,"xxl")){
+        @content;
+    }
+    
+}
+
 $blue:rgba(14, 135, 193, 0.8);
 $purple:rgb(29, 13, 66);
