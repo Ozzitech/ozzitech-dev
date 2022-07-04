@@ -1,0 +1,18 @@
+html {
+	scroll-behavior: smooth;
+	font-family: sans-serif !important;
+	overflow-x: hidden;
+}
+body {
+	background: linear-gradient(220deg, #180000, #1c0011 15%, #210126 36%, #0d0125 75%);
+	color: #fff;
+	letter-spacing: .02rem;
+	background-repeat: no-repeat;
+	font-family: $font-family;
+	margin: 0;
+	padding: 0;
+
+}
+*{
+	box-sizing: border-box;
+}
