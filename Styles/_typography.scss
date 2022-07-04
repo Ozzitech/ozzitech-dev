@@ -1,8 +1,6 @@
-html {
-	scroll-behavior: smooth;
-	font-family: sans-serif !important;
-	overflow-x: hidden;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
+$font-family:'Montserrat', serif;
+
 body {
 	background: linear-gradient(220deg, #180000, #1c0011 15%, #210126 36%, #0d0125 75%);
 	color: #fff;
