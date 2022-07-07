@@ -1,122 +1,79 @@
-#header{
-    z-index: 1;
-    position: fixed;
+header{
     display: flex;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 0; 
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    @include xl{
+        justify-content: space-around;
+    }
+    svg{
+        width: clamp(180px,20vw + 1rem,300px);
+    }
 }
 
-#header.scrolled {
+.scrolled {
   background: rgba(14, 5, 42, 0.9);
-  color: #e0e0e0;
-transition: all 0.3s ease;
 }
 
 .nav-menu{
-padding: 20px;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-around;
-a{
-    .img-logo{
-        background-image: url('../assets/logo/Ozzitech logo Light.png');
-        width: 200px;
-        height: 40px;
-        margin-right: 50px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        @include lg{
-            width:250px;
-            height: 100px;
-        }
-        @include xl{
-            width:300px;
-            height: 100px;
-        }
-    }
-
-}
-.nav-list{
-    display: flex;
-    gap:25px;
     position: fixed;
-    z-index: 3;
-    // position:absolute;
-    background-image: linear-gradient(rgb(32, 8, 37),rgb(8, 8, 19));
-    padding:60px 0;
-    right:0;
-    top:0;
-    margin:0;
+    display: flex;
+    flex-direction: column;
     width:100%;
     height: 100vh;
-    transition: 1s ease;
-    right: -1300px;
-    flex-direction: column;
-    .nav-item{
-        margin-left: 10%;
-        list-style-type: none;
-        @include xxl{
-            padding: 20px !important;
+    padding-block:60px;
+    align-items: center;
+    top:0;
+    right: -100%;
+    transition: 1s ease ;
+    background-image: linear-gradient(45deg,$darkblue,$darkpurple);
+    @include xl{
+        position: static;
+        flex-direction: row;
+        height: auto;
+        padding: 0;
+        width:auto;
+        background: none;
+        transition: none;
+        
+    }
+    .nav-link{
+        color: $blue;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-block: 40px;
+        transition: 1s ease;
+        @include xl{
+            color: white;
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 0;
+            padding-inline: 1rem;
+            background: none;
+            transition: none;
         }
-        .nav-link{
-            text-decoration: none;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 1.5rem;
-            line-height: 22px;
-            text-align: right;
-            text-transform: uppercase;
+        &:hover{
             color: $blue;
         }
     }
-    @include xl{
-        justify-content: end;
-        flex-direction: row;
-        transition: none;
-        position: static;
-        background-image: none;
-        height: auto;
-        padding: 0;
-        .nav-item{
-            margin-left: 0;
-            padding: 0;
-            .nav-link{
-                white-space: nowrap;
-                font-size: 1rem;
-                color: #FFFFFF;
-                &:hover{
-                    color:$blue;
-                }
-
-            }
-        }
-    }
-
 }
 .hamburger{
     display:block;
-    z-index: 3;
     cursor:pointer;
-    right:0;
-    @include sm{
-        display:block;
-    }
     @include xl{
         display: none;
     }
     .bar{
-        transition: 600ms;
+        display:block;
         width:30px;
         height:4px;
-        border-radius: 5px;
-        display:block;
         margin:7px;
         background-color:$blue;
+        transition: 600ms;
     }
 }
 .active{
@@ -127,10 +84,9 @@ a{
         transform:translateY(11px) rotate(45deg);
     }
     .bar:nth-child(3){
-        transform:translateY(-10px) rotate(-45deg);
+        transform:translateY(-11px) rotate(-45deg);
     }
 }
-}
 .active{
-right:0px !important;
+    right:0px !important;
 }
