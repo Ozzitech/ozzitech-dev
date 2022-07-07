@@ -1,11 +1,17 @@
-#header{
+header{
     display: flex;
     position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    padding: 0; 
+    inset: 0 0 auto 0;
     z-index: 1;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    @include xl{
+        justify-content: space-around;
+    }
+    svg{
+        width: clamp(180px,20vw + 1rem,300px);
+    }
 }
 
 .scrolled {
@@ -13,114 +19,75 @@
 }
 
 .nav-menu{
+    position: fixed;
     display: flex;
+    flex-direction: column;
     width:100%;
-    padding: 20px;
+    height: 100vh;
+    padding-block:60px;
     align-items: center;
-    justify-content: space-between;
-    @include xxl{
-        justify-content: space-around;
+    top:0;
+    right: -100%;
+    transition: 1s ease ;
+    background-image: linear-gradient(45deg,$darkblue,$darkpurple);
+    @include xl{
+        position: static;
+        flex-direction: row;
+        justify-items: flex-end;
+        height: auto;
+        padding: 0;
+        width:auto;
+        background: none;
+        transition: none;
+        
     }
-    .img-logo{
-        width: 200px;
-        height: 40px;
-        margin-right: 50px;
-        background-image: url('../images/Ozzitech logo Light1.svg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        @include lg{
-            width:250px;
-            height: 100px;
-        }
-        @include xl{
-            width:260px;
-            height: 100px;
-            margin-right: 0px;
-        }
-    }
-    .nav-list{
-        display: flex;
-        flex-direction: column;
-        gap:25px;
-        position: fixed;
-        width:100%;
-        height: 100vh;
-        padding:60px 0;
-        margin:0;
-        top:0;
+    .nav-link{
+        color: $blue;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-block: 40px;
         transition: 1s ease;
-        right: -1300px;
-        background-image: linear-gradient(45deg,$darkblue,$darkpurple);
-        .nav-item{
-            margin-left: 10%;
-            padding: 40px;
-            list-style-type: none;
-            @include xxl{
-                padding: 20px !important;
-            }
-            .nav-link{
-                text-decoration: none;
-                color: $blue;
-                font-weight: 500;
-                font-size: 1.5rem;
-                line-height: 22px;
-                text-transform: uppercase;
-            }
-        }
         @include xl{
-            flex-direction: row;
-            justify-content: end;
-            position: static;
-            width: auto;
-            height: auto;
+            color: white;
+            font-weight: 400;
+            font-size: 1rem;
             padding: 0;
-            background-image: none;
+            padding-inline: 1rem;
+            background: none;
             transition: none;
-            .nav-item{
-                margin-left: 0;
-                padding: 10px;
-                .nav-link{
-                    color: $white;
-                    font-size: 1rem;
-                    white-space: nowrap;
-                    &:hover{
-                        color:$blue;
-                    }
-                }
-            }
         }
-    }
-    .hamburger{
-        display:block;
-        right:0;
-        z-index: 3;
-        cursor:pointer;
-        @include xl{
-            display: none;
-        }
-        .bar{
-            display:block;
-            width:30px;
-            height:4px;
-            margin:7px;
-            background-color:$blue;
-            transition: 600ms;
-        }
-    }
-    .active{
-        .bar:nth-child(2){
-            opacity:0;
-        }
-        .bar:nth-child(1){
-            transform:translateY(11px) rotate(45deg);
-        }
-        .bar:nth-child(3){
-            transform:translateY(-11px) rotate(-45deg);
+        &:hover{
+            color: $blue;
         }
     }
 }
-
+.hamburger{
+    display:block;
+    cursor:pointer;
+    @include xl{
+        display: none;
+    }
+    .bar{
+        display:block;
+        width:30px;
+        height:4px;
+        margin:7px;
+        background-color:$blue;
+        transition: 600ms;
+    }
+}
 .active{
-right:0px !important;
+    .bar:nth-child(2){
+        opacity:0;
+    }
+    .bar:nth-child(1){
+        transform:translateY(11px) rotate(45deg);
+    }
+    .bar:nth-child(3){
+        transform:translateY(-11px) rotate(-45deg);
+    }
+}
+.active{
+    right:0px !important;
 }

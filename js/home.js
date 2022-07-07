@@ -1,6 +1,6 @@
 
 const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-list');
+const navMenu = document.querySelector('.nav-menu');
 const navLink = document.querySelectorAll('.nav-link');
 
 window.onscroll = function(){
@@ -18,12 +18,12 @@ window.onscroll = function(){
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
-  navList.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });
 
 navLink.forEach(n=>n.addEventListener('click',()=>{
   hamburger.classList.remove("active");
-  navList.classList.remove("active");
+  navMenu.classList.remove("active");
 
 
 }))
