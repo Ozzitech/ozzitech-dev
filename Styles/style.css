@@ -588,7 +588,6 @@ header svg {
   .nav-menu {
     position: static;
     flex-direction: row;
-    justify-items: flex-end;
     height: auto;
     padding: 0;
     width: auto;
