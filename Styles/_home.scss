@@ -1,27 +1,67 @@
+.gradient-underline{
+    content: '';
+    position: absolute;
+    background: linear-gradient(-90deg, #0e87c1, #500ec1);
+    inset:auto 0 0 0;
+    height: 4px;
+}
+
+.home-headings{
+    position: relative;
+    padding-block: 10px;
+    width: 100%;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 0.8vw + 1rem,3rem);
+    &::after{
+        @extend .gradient-underline;
+        width: max(200px,30%);
+    }
+    @include lg{
+        padding-block: 20px;
+    }
+}
+
+.para{
+    font-weight: 100;
+    padding: 0;
+    font-size: clamp(0.7rem,1vw + 0.5rem,1.8rem);
+    line-height: 1.5rem;
+    @include xl{
+        line-height: 2.5rem;
+    }  
+
+}
 
 /*button styles*/
- 
-.btn {
-	background: linear-gradient(270deg, #0e87c1, #500ec1);
-	border: none;
-	color: rgba(255, 255, 255, .8);
-	padding: 0 ;
-	border-radius: 40.25rem;
-	cursor: pointer;
-	display: block;
-	font-size: 1.2rem;
-}
-  
-.btn-inner {
-	background-color: rgba(13, 1, 37, .9);
-	border-radius: 33px;
-	display: inline-block;
-	margin: 2px;
-	padding: 1rem 3rem;
-	text-transform: uppercase;
-}
 
-/*Header Section*/
+.btn-gradient{
+    position: relative;
+    background-color: rgba(13, 1, 37, .9);
+    color: white;
+    font-size: clamp(0.6rem,0.6vw + 0.5rem,1.5rem);
+    padding:0.4rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 400;
+    font-family: $font-family;
+    border: 0;
+    text-transform: uppercase;
+    @include xl{
+        padding: 0.7rem 4rem;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background:linear-gradient(270deg, #0e87c1, #500ec1) ;
+        inset: -2px;
+        z-index: -3;
+        border-radius: 50px;
+        @include xl{
+            inset: -3px;
+        }
+    }
+
+
+}
 
 
 /*Intro Section*/
@@ -29,16 +69,14 @@
 .intro{
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 10px;
+    padding: 10px 30px;
     margin-top: 15%;
-    background-image: url('../assets/images/Stars.png');
+    background-image: url('../images/Stars.png');
     background-size: contain;
-    font-family: $font-family;
     text-align: center;
     align-items: center;
     @include lg{
-        padding: 20px 100px;
+        padding: 20px 200px;
         text-align: left;
         align-items: flex-start;
         margin-top: 10%;
@@ -46,265 +84,185 @@
 
     h2{
         width: 100%;
-        font-size: 2.5rem;
+        font-size: clamp(2rem,5vw + 1rem,8rem);
         line-height: 1em;
         color: $blue;
         font-weight: 300;
         text-align: center;
-        @include sm{
-            font-size: 4rem;
-        }
-
         @include md{
             width: 100%;
         }
         @include lg{
-            width: 70%;
-            font-size: 6em;
             text-align: left;
         }
         
     }
     p{
-        color: #FFFFFF;
-        font-size: 1rem;
-        font-weight: 200;
         width: 80%;
-        padding: 0;
         margin-bottom: 20px;
         text-align: center;
-        align-self: center;
         @include md{
-            font-size: 1.3rem;
             width: 80%;
         }
         @include lg{
-            width: 50%;
-            padding: 0;
-            font-size: 1.2rem;
+            width: 60%;
             text-align: left;
-            align-self: flex-start;
         }
     }
     button{
-        align-self: center;
         max-width: max-content;
         @include lg{
-            margin-left: 0px;
             margin-top: 30px;
-            align-self:flex-start;
         }
-
-    .btn-inner{
-        padding: 0.5em 2em;
-        font-size: 0.8em;
-    }
     }
     &-img{
-        background-image: url('../assets/images/Rocket.png');
+        background-image: url('../images/Rocket.png');
         width:100px;
-        height: 180px;
+        height: 100px;
         margin-top: 20px;
         align-self: flex-end;
         background-repeat: no-repeat;
         background-size: contain;
         @include md{
-            width: 150px;
+            width: 120px;
+            height: 120px;
         }
         @include lg{
+            margin-right: -70px;
             width: 180px;
+            height: 180px;
         }
-
     }
 }
 
-/*Decription Section*/
+/*Description Section*/
 
 .desc-section{
-    margin:40px 10px;
+    margin:40px 30px;
     @include md{
-        margin:40px;
+        margin:80px 100px;
     }
     @include lg{
-        margin: 50px 200px;
+        margin: 100px 200px;
     }
     @include xl{
-        margin: 100px 350px;
+        margin: 200px 350px;
 
     }
     p{
-        font-weight: 200;
-        font-size: clamp(0.5rem,1rem,1.2rem);
-        line-height: 1.5;
-        color: #FFFFFF;
         text-align: center;
-        padding: 0;
     }
 }
 
 /*Our Work Section*/
-
 .our-work{
     display:flex;
     flex-direction: column;
-    margin: 40px 10px;
-    gap:30px;
+    margin-inline: 30px;
     @include md{
-        margin: 40px;
+        margin-inline: 100px;
     }
     @include xl{
-        margin: 50px 100px;
+        margin-inline: 10%;
     }
-    h2{
-        padding:10px 0px;
-        border-bottom: 3px solid $blue;
-        width: 70%;
-        font-weight: 500;
-        @include xl{
-            width:30%;
-        }
 
-    }
-    .outer-box{
+    .img-box{
         display: flex;
-        flex-direction: column;
-        gap: 50px;
-        
-        .img-box{
-            width: 60%;
-            height: auto;
-            margin-bottom: 3rem;
-            @include sm{
-                margin-bottom: 100px;
-            }
-            // @include sm{
-            //     margin-bottom: 200px;
-            // }
-            @include md{
-                margin-bottom: 200px;
-            }
-            // @include xl{
-            //     height: 700px;
-            // }
-            img{
-                max-width: 100%;
-                max-height: 100%;
-            }
-            &:nth-child(even){
-                align-self: flex-end;
-                .card{
-                    margin-left: -20%;
-                }
-                
-            }
-            &:nth-child(odd){
-                .card{
-                    margin-left: 60%;
-                }
-            }
-            .card{
-                display: flex;
-                flex-direction: column;
-                color:#021132;
-                width: 50%;
-                opacity: 0.9;
-                background-color: white;
-                margin-top: -50%;
-                font-size: 0.5rem;
-                padding:10px;
-                @include xl{
-                    padding: 25px 50px;
-                    font-size: 1em;
-                }
-                p{
-                    color: #021132;
-                    font-size: 1em;
-                    margin:0;
-                    padding:0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    @include md{
-                        white-space: normal;
-                    }
-                }
-                a{
-                    text-decoration: none;
-                    color: #021132;
-                    align-self: end;
-                    margin-top: 5px;
-                    @include xl{
-                        margin-top: 20px;
+        align-items: center;
+        padding-block: 20px;
+        @include xl{
+            padding-block: 50px;
+        }
+        img{
+            max-width: 60%;
 
-                    }
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            z-index: 3;
+            color: black;
+            height: max-content;
+            width: 40%;
+            padding-inline: 10px;
+            background-color: rgba(255, 255, 255, .8);
+            @include lg{
+                padding: 1.5rem 2rem;
+
+
+            }
+            h3{
+                font-size: calc(1vw + 0.3rem);
+            }
+        
+            a{
+                text-decoration: none;
+                align-self: end;
+                font-size:clamp(0.6rem,0.7vw + 0.3rem , 1.5rem);
+                color: $blue;
+                padding-block: 10px;
+                @include md{
+                    padding-block-start: 20px;
+                }
+
                 &:hover{
                     color: $purple;
                     font-weight: 600;
                 }
+            }
+            p{
+                color: #021132;
+                font-size:clamp(0.6rem,0.7vw + 0.3rem , 1.5rem);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include md{
+                    white-space: normal;
                 }
-                
             }
         }
-    }   
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            .card{
+                margin-right: -20%;
+            }
+        }
+        &:nth-child(odd){
+            .card{
+                margin-left: -20%;
+            }
+        }
+    }
 }
 
-/*Our Process Section*/
-
 .our-process{
-    margin: 100px 10px;
+    margin: 100px 30px;
     display: flex;
     flex-direction: column;
     @include md{
-        margin: 40px;
-    }
-    @include lg{
-        margin-top: 200px;
+        margin-inline: 100px;
     }
     @include xl{
-        margin: 50px 100px;
-    }
-    h2{
-        padding: 10px 0px;
-        border-bottom: 3px solid $blue;
-        width:70%;
-        font-weight: 500;
-        @include xl{
-            width: 30%;
-        }
+        margin-inline: 10%;
     }
     .our-process-list{
-        margin-bottom: 130px;
         display: flex;
-        align-content: space-between;
         justify-content: space-between;
         flex-direction: column;
         text-align: center;
-        align-items: center;
-        gap: 30px;
+        align-items: flex-start;
+        margin-block-end: 20px;
+        gap: 20px;
         @include md{
+            margin-block-end: 100px;
             flex-direction: row;
             text-align: left;
         }
-        .btn-inner{
-            padding: 0.5em 2em;
-            font-size: 0.8em;
+        @include xxl{
+            margin-block-end: 150px;
         }
-        .btn{
-            height: max-content;
-        }
-
-        p{
-            padding: 0;
-            font-weight: 300;
-            font-size: 1rem;
-            line-height: 35px;        @include md{
-                font-size: 1.3rem;
-                width: 80%;
-            }
-            @include lg{
-                font-size: 1.3rem;
-            }
-
+        button{
+            align-self: center;
         }
         p:first-child{
             width: 100%;
@@ -317,15 +275,11 @@
         }
         .img-box{
             display: none;
-
             img{
                 width: 100%;
             }
             @include md{
                 display: block;
-            }
-            @include xl{
-                height: full;
                 width: 30%;
             }
         }
@@ -338,90 +292,11 @@
             }
             h3{
                 margin: 0;
-                font-size: 2.3rem;
+                font-size: clamp(2rem,3vw + 1rem,6rem);
                 font-weight: 500;
-                color: #0E87C1;
-                @include xl{
-                    font-size: 5rem;
-                }
-            }
-            p{
-                font-size: 1em;
-                @include lg{
-                    font-size: 1.3rem;
-                }
+                color: $blue;
             }
         }
     }
 }
 
-/*Footer Section*/
-
-footer{
-    border-top: 2px solid $blue;
-    display: flex;
-    .footer-box{
-        width: 100%;
-        margin: 30px 10px;
-        font-size: 0.5rem;
-        font-weight: 200;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        @include sm{
-            justify-content: space-around;
-            font-size: 0.7rem;
-        }
-        @include md{
-            margin: 30px;
-            font-size: 1em;
-        }
-        p{
-            margin: 0;
-            padding: 0;
-            font-size: 1em;
-        }
-        .ozzitech-info{
-            .img-box{
-                height: 20px;
-                width: 100%;
-                background:url('../assets/logo/Ozzitech\ logo\ Light.png');
-                background-size: contain;
-                background-repeat: no-repeat;
-                @include md{
-                    height: 30px;
-
-                }
-            }
-            .socials{
-                margin-top: 10px;
-                display: flex;
-                gap: 20px;
-                div{
-                    width:20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    background-color: $blue;
-                    overflow: hidden;
-                    @include md{
-                        width:40px;
-                        height: 40px;
-                    }
-                    img{
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        .terms-box{
-            flex-direction: column;
-            display: flex;
-            @include xl{
-                gap:30px;
-                flex-direction: row;
-
-            }
-        }
-    }
-}
